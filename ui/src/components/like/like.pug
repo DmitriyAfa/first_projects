@@ -1,0 +1,28 @@
+//- options.expand - задает (data-attr) data-expand, возможные значение 'up', по умолчанию 'down'.
+
+mixin like(options)
+  if !options
+    - options = {}
+
+  - if (!options.data)
+    .like__element
+      include ./img/heart_border.svg
+      include ./img/heart.svg
+      - if (!options.content)
+        p 2
+      - if (options.content) 
+        p= options.content
+
+
+  - if (options.data)
+    .like.js-like
+      .like__header
+        h3= options.data.name
+        h3= options.data.example
+      .like__elements
+        .like__element(data-name = 'like')
+          p.like__content= options.data.content
+        -if (options.button)
+          .like__element(data-name = 'like')
+            p.like__content= options.button.content
+

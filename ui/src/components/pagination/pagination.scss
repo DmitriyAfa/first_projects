@@ -1,0 +1,113 @@
+@import "../../theme/variables.scss";
+
+.pagination {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    h3:last-child {
+      font-weight: 400;
+      color: $color-dark-50;
+    }
+
+    margin-bottom: 0.8rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__container {
+    margin-bottom: 0.6rem;
+    .paginationjs {
+      &-pages {
+        ul {
+          display: flex;
+
+          li.paginationjs-page.active {
+            background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+            border-radius: 22px;
+            a {
+              color: #fff;
+              font-weight: bold;
+            }
+          }
+
+          li.paginationjs-page {
+            width: 2.85rem;
+            border: 0;
+            height: 2.85rem;
+            a {
+              font-family: Montserrat;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 12px;
+              line-height: 42px;
+              color: rgba(31, 32, 65, 0.5);
+              height: 0;
+            }
+          }
+
+          .paginationjs-prev.J-paginationjs-previous {
+            height: 2.85rem;
+            width: 2.85rem;
+            border-radius: 22px;
+            border: 0;
+            background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+            a {
+              height: 2.85rem;
+              border: 0;
+              border-radius: 22px;
+              background: url(./img/pagination__arrow_back.svg) no-repeat;
+              background-position-x: 0.5rem;
+              background-position-y: 0.6rem;
+            }
+          }
+
+          .paginationjs-next.J-paginationjs-next {
+            height: 2.85rem;
+            width: 2.85rem;
+            border-radius: 22px;
+            border: 0;
+            background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+            a {
+              height: 2.85rem;
+              border: 0;
+              border-radius: 22px;
+              background: url(./img/pagination__arrow_forward.svg) no-repeat;
+              background-position-x: 0.5rem;
+              background-position-y: 0.6rem;
+            }
+          }
+        }
+
+        li.paginationjs-ellipsis.disabled {
+          border: 0;
+          a {
+            min-width: 2.85rem;
+            height: 2.85rem;
+            line-height: 2.85rem;
+            display: block;
+            background: #fff;
+            font-size: 14px;
+            text-decoration: none;
+            text-align: center;
+            color: rgba(31, 32, 65, 0.5);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    padding-left: 0.35rem;
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../theme/variables.scss";
+
+.toggle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    h3:last-child {
+      font-weight: 400;
+      color: $color-dark-50;
+    }
+
+    margin-bottom: 0.8rem;
+  }
+
+  &__elements {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__element {
+    display: flex;
+    margin-bottom: 1rem;
+    min-width: 8.4rem;
+
+    &-label {
+      min-width: 40px;
+      height: 20px;
+      border: 1px solid $color-dark-25;
+      border-radius: 10px;
+      padding: 0.2rem 0px 0px 0.2rem;
+    }
+
+    &-ball {
+      width: 12px;
+      height: 12px;
+      background: rgba(31, 32, 65, 0.25);
+      border-radius: 10px;
+    }
+
+    &-content {
+      min-width: 14rem;
+      color: $color-dark-75;
+      margin-left: 0.7rem;
+      line-height: 18px;
+    }
+  }
+}

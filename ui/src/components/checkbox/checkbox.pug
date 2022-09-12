@@ -1,0 +1,62 @@
+//-
+  options.name - form element name
+  options.type - input type
+  options.placeholder - input placeholder
+  options.pattern - input pattern
+  options.tabindex - input tabindex
+  options.required - input required
+  options.label - подпись к checkbox и radio
+
+mixin checkbox(options)
+  if !options
+    - options = {}
+
+  - if (!options.data)
+    .checkbox
+      .checkbox__element.js-checkbox__element
+        .checkbox__element-checkbox.js-checkbox__element-checkbox
+          .checkbox__element-box.js-checkbox__element-box
+            .checkbox__element-tick.js-checkbox__element-tick
+          p.checkbox__element-content Example
+
+  - if (options.data && !options.data.type)
+    .checkbox
+      .checkbox__header.js-checkbox__header
+        h3= options.data.name
+        h3= options.data.example
+      .checkbox__element.js-checkbox__element
+        if options.items
+          each item in options.items
+            .checkbox__element-checkbox.js-checkbox__element-checkbox
+              .checkbox__element-box.js-checkbox__element-box
+                .checkbox__element-tick.js-checkbox__element-tick
+              p.checkbox__element-content= item.content
+
+  - if (options.data && options.data.type === 'expandabled')
+    .checkbox
+      .checkbox__header.js-checkbox__header(data-type = 'expandabled')
+        h3.checkbox__header-h3= options.data.name
+        button.checkbox__header-button.js-checkbox__header-button
+      .checkbox__element.checkbox__element_expanded.checkbox__element_none.js-checkbox__element
+        if options.items
+          each item in options.items
+            .checkbox__element-checkbox.js-checkbox__element-checkbox
+              .checkbox__element-box.js-checkbox__element-box
+                .checkbox__element-tick.js-checkbox__element-tick
+              p.checkbox__element-content= item.content
+
+  - if (options.data && options.data.type === 'rich')
+    .checkbox
+      .checkbox__header.js-checkbox__header
+        h3= options.data.name
+        h3= options.data.example
+      .checkbox__element.js-checkbox__element
+        if options.items
+          each item in options.items
+            .checkbox__element-checkbox.js-checkbox__element-checkbox(data-element= options.data.type)
+              .checkbox__element-box.js-checkbox__element-box
+                .checkbox__element-tick.js-checkbox__element-tick
+              .checkbox__element-contents.js-checkbox__element-contents
+                h3.checkbox__element-contents-header.js-checkbox__element-contents-header= item.header
+                p.checkbox__element-content= item.content
+

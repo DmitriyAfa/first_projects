@@ -1,0 +1,263 @@
+.statistics {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  background-color: #303030;
+
+  &__bg {
+    width: 100%;
+    min-height: 800px;
+    display: grid;
+    grid-template-columns: repeat(96, 1fr);
+    z-index: 1;
+    background-color: #303030;
+    img {
+      object-fit: cover;
+      object-position: 0 0;
+      opacity: 0.24;
+    }
+
+    &_position_absolute {
+      position: absolute;
+    }
+
+    &-1 {
+      grid-column: 25 / span 3;
+      top: 41px;
+      img {
+        width: 34px;
+        height: 37px;
+      }
+      @media (max-width: 320px) {
+        left: -5px;
+      }
+    }
+
+    &-2 {
+      grid-column: 70 / span 3;
+      top: 30px;
+      img {
+        width: 106px;
+        height: 105px;
+
+        @media (max-width: 768px) {
+          width: 53px;
+          height: 52.5px;
+        }
+      }
+
+      @media (max-width: 320px) {
+        left: -5px;
+      }
+    }
+
+    &-3 {
+      grid-column: 88 / span 3;
+      top: 246px;
+
+      @media (max-width: 600px) {
+        left: -15px;
+      }
+      img {
+        width: 34px;
+        height: 37px;
+      }
+    }
+
+    &-4 {
+      grid-column: 89 / span 3;
+      top: 467px;
+      img {
+        width: 80px;
+        height: 104px;
+        @media (max-width: 900px) {
+          width: 40px;
+          height: 52px;
+        }
+
+        @media (max-width: 600px) {
+          width: 20px;
+          height: 25.5px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        left: -20px;
+      }
+    }
+
+    &-5 {
+      grid-column: 86 / span 2;
+      bottom: 80px;
+      img {
+        width: 17px;
+        height: 26px;
+      }
+    }
+
+    &-6 {
+      grid-column: 6 / span 3;
+      bottom: 47px;
+      img {
+        width: 34px;
+        height: 37px;
+      }
+
+      @media (max-width: 768px) {
+        left: 26px;
+      }
+
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+
+    &-7 {
+      grid-column: 58 / span 9;
+      bottom: 38px;
+      left: 19px;
+      img {
+        width: 115px;
+        height: 108px;
+
+        @media (max-width: 600px) {
+          width: 57.5px;
+          height: 54px;
+        }
+      }
+    }
+
+    &-8 {
+      grid-column: 24 / span 3;
+      bottom: 68px;
+      img {
+        width: 128px;
+        height: 102px;
+      }
+
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+
+    &-9 {
+      grid-column: 5 / span 7;
+      top: 176px;
+      img {
+        width: 91px;
+        height: 123px;
+
+        @media (max-width: 768px) {
+          width: 45.5px;
+          height: 61.5px;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    display: grid;
+    grid-template-rows: 106px 1fr;
+    z-index: 2;
+  }
+
+  &__content {
+    grid-row: 2;
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-family: "Grand Hotel";
+      font-size: 100px;
+      line-height: 0.8;
+      font-weight: 400;
+      color: #ffc200;
+    }
+
+    p {
+      font-family: Montserrat;
+      font-size: 24.7px;
+      line-height: 1.2;
+      font-weight: 400;
+      color: #ffffff;
+      margin: 2% 0 0 0;
+      width: 54%;
+      text-align: center;
+
+      @media (max-width: 480px) {
+        width: 95%;
+      }
+    }
+
+    &-single {
+      display: flex;
+      margin: 6% 0 0 0;
+      width: 85%;
+      justify-content: space-evenly;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &-wrapper {
+        width: 233px;
+        height: 233px;
+
+        @media (max-width: 1200px) {
+          width: 183px;
+          height: 183px;
+        }
+
+        @media (max-width: 768px) {
+          width: 333px;
+          height: 333px;
+          margin: 0 0 5% 0;
+        }
+
+        @media (max-width: 480px) {
+          width: 233px;
+          height: 233px;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 5px solid #ffffff;
+        border-radius: 50%;
+
+        p.title {
+          width: 100%;
+          font-family: Montserrat;
+          font-size: 50.6px;
+          line-height: 1.2;
+          font-weight: 700;
+          color: #ffc200;
+          text-align: center;
+        }
+
+        p.content {
+          width: 100%;
+          font-family: Montserrat;
+          font-size: 28.9px;
+          line-height: 1.2;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #ffffff;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

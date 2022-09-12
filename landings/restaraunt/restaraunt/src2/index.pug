@@ -1,0 +1,228 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Restaraunt
+  body
+    .wrapper
+      section.home
+        .home__bg.home__bg_position_absolute
+          .home__bg-left.home__bg_grid-row
+            img.img_height(src=require(`./img/home/home__bg-left.jpg`), alt = 'background')
+          .home__bg-center.home__bg_grid-row
+            img.img_height(src=require(`./img/home/home__bg-center.png`), alt = 'background')
+          .home__bg-right.home__bg_grid-row
+            img.img_height(src=require(`./img/home/home__bg-right.png`), alt = 'background')
+          .home__bg-1.home__bg_position_absolute.home__bg_grid-row
+            img(src=require(`./img/home/home__bg_1.png`), alt = 'background')
+          .home__bg-2.home__bg_position_absolute.home__bg_grid-row
+            img(src=require(`./img/home/home__bg_2.png`), alt = 'background')
+          .home__bg-3.home__bg_position_absolute.home__bg_grid-row
+            img(src=require(`./img/home/home__bg_1.png`), alt = 'background')
+          .home__bg-4.home__bg_position_absolute.home__bg_grid-row
+            img(src=require(`./img/home/home__bg_4.png`), alt = 'background')
+          .home__bg-5.home__bg_position_absolute.home__bg_grid-row
+            img(src=require(`./img/home/home__bg_5.png`), alt = 'background')
+          .home__bg-6.home__bg_position_absolute.home__bg_grid-row
+            img(src=require(`./img/home/home__bg_1.png`), alt = 'background')
+          .home__bg-7.home__bg_position_absolute.home__bg_grid-row
+            img(src=require(`./img/home/home__bg_7.png`), alt = 'background')
+          .home__bg-8.home__bg_position_absolute.home__bg_grid-row
+            img(src=require(`./img/home/home__bg_1.png`), alt = 'background')
+          .home__bg-9.home__bg_position_absolute.home__bg_grid-row
+            img(src=require(`./img/home/home__bg_9.png`), alt = 'background')
+        .home__grid
+          header.home__header
+            a.home__header-logo(href = "")
+              img(src=require(`./img/home/home__logo.png`), alt = 'logo')
+            .home__header-burger
+              span 
+            nav.home__header-menu
+              ul.home__header-list
+                li
+                  a.home__header-link Home
+                li
+                  a.home__header-link Product
+                li
+                  a.home__header-link About
+                li
+                  a.home__header-link Contact
+              a.home__search
+                img(src=require(`./img/home/home__search.png`), alt = 'search')
+          .home__main
+            h1 Title Here
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            button Order Now
+      section.seller.animate__animated.animate__backInUp
+        .seller__title
+          h2 Best Seller
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+        .seller__main
+          .seller__main-single
+            img(src=require(`./img/seller/seller__1.png`), alt = 'seller')
+            h3 Title Here
+            p  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          .seller__main-single
+            img(src=require(`./img/seller/seller__2.png`), alt = 'seller')
+            h3 Title Here
+            p  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          .seller__main-single
+            img(src=require(`./img/seller/seller__3.png`), alt = 'seller')
+            h3 Title Here
+            p  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      sectoon.taste
+        .taste__bg
+          .taste__bg-wrapper
+            img(src=require(`./img/taste/taste__bg.png`), alt = 'taste__bg')
+        .taste__main
+          .taste__main-img
+            img(src=require(`./img/taste/taste__1.png`), alt = 'taste')
+          .taste__main-content
+            h2 Oriental Taste
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            button Order Now
+      section.statistics
+        .statistics__bg.statistics__bg_position_absolute
+          .statistics__bg-1.statistics__bg_position_absolute
+            img(src=require(`./img/statistics/statistics__bg_1.png`), alt = 'background')
+          .statistics__bg-2.statistics__bg_position_absolute
+            img(src=require(`./img/statistics/statistics__bg_2.png`), alt = 'background')
+          .statistics__bg-3.statistics__bg_position_absolute
+            img(src=require(`./img/statistics/statistics__bg_1.png`), alt = 'background')
+          .statistics__bg-4.statistics__bg_position_absolute
+            img(src=require(`./img/statistics/statistics__bg_4.png`), alt = 'background')
+          .statistics__bg-5.statistics__bg_position_absolute
+            img(src=require(`./img/statistics/statistics__bg_5.png`), alt = 'background')
+          .statistics__bg-6.statistics__bg_position_absolute
+            img(src=require(`./img/statistics/statistics__bg_1.png`), alt = 'background')
+          .statistics__bg-7.statistics__bg_position_absolute
+            img(src=require(`./img/statistics/statistics__bg_7.png`), alt = 'background')
+          .statistics__bg-8.statistics__bg_position_absolute
+            img(src=require(`./img/statistics/statistics__bg_8.png`), alt = 'background')
+          .statistics__bg-9.statistics__bg_position_absolute
+            img(src=require(`./img/statistics/statistics__bg_9.png`), alt = 'background')
+        .statistics__wrapper
+          .statistics__content
+            h2 Statistics
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            .statistics__content-single
+              .statistics__content-single-wrapper
+                p.title 123
+                p.content outlets
+              .statistics__content-single-wrapper
+                p.title 100
+                p.content chef
+              .statistics__content-single-wrapper
+                p.title 300
+                p.content menu
+              .statistics__content-single-wrapper
+                p.title 30
+                p.content country
+      section.five
+        .five__bg
+          .five__bg-wrapper
+            img(src=require(`./img/five/five__bg.png`), alt = 'background')
+          .five__bg-color
+        .five__main
+          .five__main-content
+            h2 Chicken Grill
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            button Order Now
+          .five__main-img
+            img(src=require(`./img/five/five__1.png`), alt = 'img')
+      section.six
+        .six__opacity
+        .six__bg
+          .six__bg-wrapper
+            img(src=require(`./img/six/six__bg.png`), alt = 'bg')
+        .six__main
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+          h2 Lenora Fields
+      section.subscribe
+        .subscribe__bg.subscribe__bg_position_absolute
+          .subscribe__bg-1.subscribe__bg_position_absolute
+            img(src=require(`./img/subscribe/subscribe__bg_1.png`), alt = 'background')
+          .subscribe__bg-2.subscribe__bg_position_absolute
+            img(src=require(`./img/subscribe/subscribe__bg_2.png`), alt = 'background')
+          .subscribe__bg-3.subscribe__bg_position_absolute
+            img(src=require(`./img/subscribe/subscribe__bg_1.png`), alt = 'background')
+          .subscribe__bg-4.subscribe__bg_position_absolute
+            img(src=require(`./img/subscribe/subscribe__bg_4.png`), alt = 'background')
+          .subscribe__bg-5.subscribe__bg_position_absolute
+            img(src=require(`./img/subscribe/subscribe__bg_5.png`), alt = 'background')
+          .subscribe__bg-6.subscribe__bg_position_absolute
+            img(src=require(`./img/subscribe/subscribe__bg_1.png`), alt = 'background')
+          .subscribe__bg-7.subscribe__bg_position_absolute
+            img(src=require(`./img/subscribe/subscribe__bg_7.png`), alt = 'background')
+          .subscribe__bg-8.subscribe__bg_position_absolute
+            img(src=require(`./img/subscribe/subscribe__bg_8.png`), alt = 'background')
+          .subscribe__bg-9.subscribe__bg_position_absolute
+            img(src=require(`./img/subscribe/subscribe__bg_9.png`), alt = 'background')
+        .subscribe__wrapper
+          .subscribe__content
+            h2 Subscribe
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            .subscribe__form
+              form(action="#")
+                input(type="email" name="email", placeholder = 'Your Email')
+                button subscribe
+      footer.footer
+        .footer__wrapper
+          .footer__title
+            h3 Title Here
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at dignissim nunc, id maximus ex. Etiam nec dignissim elit, at dignissim enim.
+            ul.footer__title-icons
+              li
+                a(href="#")
+                  img(src=require(`./img/footer/footer__1.png`), alt = 'icon')
+              li
+                a(href="#")
+                  img(src=require(`./img/footer/footer__2.png`), alt = 'icon')
+              li
+                a(href="#")
+                  img(src=require(`./img/footer/footer__3.png`), alt = 'icon')
+              li
+                a(href="#")
+                  img(src=require(`./img/footer/footer__4.png`), alt = 'icon')
+          nav.footer__nav
+            .footer__nav-section
+              h3 About
+              ul
+                li
+                  a(href="#") History
+                li
+                  a(href="#") Our Team
+                li
+                  a(href="#") Brand Guidelines
+                li
+                  a(href="#") Terms&Condition
+                li
+                  a(href="#") Prevacy Policy
+            .footer__nav-section
+              h3 Services
+              ul
+                li
+                  a(href="#") How to Order
+                li
+                  a(href="#") Our Product
+                li
+                  a(href="#") Order Status
+                li
+                  a(href="#") Promo
+                li
+                  a(href="#") Payment Method
+            .footer__nav-section
+              h3 Other
+              ul
+                li
+                  a(href="#") Contact Us
+                li
+                  a(href="#") Help
+                li
+                  a(href="#") Privacy
+
+
+
+

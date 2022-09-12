@@ -1,0 +1,346 @@
+extends ../base/base
+
+include ../../components/input/input
+include ../../components/drop-down/drop-down
+include ../../components/date-dropdown/date-dropdown
+include ../../components/checkbox/checkbox
+include ../../components/evalution/evalution
+include ../../components/radio/radio
+include ../../components/toggle/toggle
+include ../../components/like/like
+include ../../components/rate-button/rate-button
+include ../../components/range-slider/range-slider
+include ../../components/pagination/pagination
+include ../../components/bullet/bullet
+
+block title
+  | Form elements
+
+block header
+  +layout__container({padding: '2_1'})
+    +header()
+
+block main
+  +layout__container({direction: 'column', padding_top: '0_9', padding_left: '10_0_5', width_max: 40})
+    +layout__container({padding_top: '0_9'})
+      +input({
+        type: 'text',
+        name: 'text field',
+        placeholder: 'Email',
+        data:{
+          name: 'text field',
+          example: 'default'
+        }
+      })
+    +layout__container({padding_top: '1_1_5'})
+      +input({
+        type: 'text',
+        name: 'text field',
+        value: 'This is pretty awesome',
+        data:{
+          name: 'text field',
+          example: 'hover / focus'
+        }
+      })
+    +layout__container({padding_top: '1_1_5'})
+      +drop-down({
+        content: 'Сколько гостей',
+        data:{
+          name: 'dropdown',
+          data: 'dropdown'
+        }
+      })
+    +layout__container({padding_top: '1_3'})
+      +input({
+        type: 'date',
+        data:{
+          name: 'masked text field'
+        }
+      })
+    +layout__container({padding_top: '2_6'})
+      +date-dropdown({
+        mix: 'js-date-dropdown__start',
+        name: 'date-dropdown',
+        placeholder: 'ДД.ММ.ГГГГ',
+        size: 'medium',
+        dateDropdown:{
+          name: 'date dropdown'
+        }
+      })
+      +layout__container({margin_left: '1_5'})
+        +date-dropdown({
+          mix: 'js-date-dropdown__end',
+          name: 'date-dropdown',
+          placeholder: 'ДД.ММ.ГГГГ',
+          size: 'medium',
+          dateDropdown:{
+            name: 'date dropdown'
+          }
+        })
+    +layout__container({padding_top: '2_6'})
+      +date-dropdown({
+        mix: 'js-date-dropdown__filter-date-dropdown',
+        name: 'filter-date-dropdown',
+        dateDropdown:{
+        name: 'filter date dropdown'
+      }
+      })
+    +layout__container({padding_top: '2_6_5'})
+      +input({
+        type: 'email',
+        name: 'subscription-text-field',
+        placeholder: 'Email',
+        data:{
+          name: 'Subscription Text Field'
+        }
+      })
+    +layout__container({padding_top: '6_8_5'})
+      +drop-down({
+        data:{
+          name: 'dropdown',
+          example: 'default'
+        },
+        content: '2 спальни, 2 кровати...',
+        size: 'medium'
+      })
+    +layout__container({padding_top: '1_1', height: '18'})
+      +drop-down({
+        data:{
+          name: 'dropdown',
+          example: 'expanded',
+          data: 'amanities'
+        },
+        content: '2 спальни, 2 кровати...',
+        size: 'medium',
+        items: [
+          {
+          data__counter: '1',
+          name: 'спальни',
+          counter: '2',
+          },
+          {
+          data__counter: '2',
+          name: 'кровати',
+          counter: '2'},
+          {
+          data__counter: '3',
+          name: 'ванные комнаты',
+          counter: '0'},
+          ]
+      })
+    +layout__container({height: '4_6'})
+      +checkbox({
+        data: {
+          type: 'expandabled',
+          name: 'expandable checkbox list'
+        }
+      })
+    +layout__container({height: '22'})
+      +checkbox({
+        data: {
+          type: 'expandabled',
+          name: 'expandable checkbox list'
+        },
+        items:[
+          {content: 'Завтрак'},
+          {content: 'Письменный стол'},
+          {content: 'Стул для кормления'},
+          {content: 'Кроватка'},
+          {content: 'Телевизор'},
+          {content: 'Шампунь'}
+        ]
+      })
+    +layout__container()
+      +evalution({
+        items:[
+          {
+            photo: 'emoticon',
+            header: 'Комфорт',
+            content: 'Шумопоглощающие стены'
+          },
+          {
+            photo: 'city',
+            header: 'Удобство',
+            content: 'Окно в каждой из спален'
+          }
+        ]
+      })
+  +layout__container({direction: 'column', padding_top: '1_7_5', padding_left: '1_9', width_max: 28})
+    +layout__container({height_max: '12_1'})
+      +checkbox({
+        data:{
+          name: 'checkbox buttons',
+        },
+        items:[
+          {content: 'Можно курить'},
+          {content: 'Можно с питомцами'},
+          {content: 'Можно пригласить гостей (до 10 человек)'}
+        ]
+      })
+    +layout__container({height_max: '6_6'})
+      +radio({
+        data:{
+          name: 'radio buttons',
+          content: 'Мужчина',
+          content1: 'Женщина'
+        }
+      })
+    +layout__container({height_max: '9_2_5'})
+      +toggle({
+        data:{
+          name: 'toggle',
+          content: 'Получать спецпредложения',
+          content1: 'Получать спецпредложения'
+        }
+      })
+    +layout__container({height_max: '6_5_5'})
+      +like({
+        data:{
+          name: 'like button',
+          content: '2'
+        },
+        button: {
+          content: '11'
+        }
+      })
+    +layout__container({height_max: '17_9'})
+      +rate-button({
+        data:{
+          name: 'rate button'
+        },
+        rate: {
+          rate: 'yes'
+        }
+      })
+    +layout__container({height_max: '22_8'})
+      +drop-down({
+        data:{
+          name: 'dropdown',
+          data: 'guests'
+        },
+          content: 'Сколько гостей',
+        items: [
+          {
+          data__counter: '1',
+          name: 'Взрослые',
+          counter: '0',
+          },
+          {
+          data__counter: '2',
+          name: 'Дети',
+          counter: '0'},
+          {
+          data__counter: '3',
+          name: 'Младенцы',
+          counter: '0'},
+          ]
+      })
+    +layout__container()
+      +checkbox({
+        data: {
+          type: 'rich',
+          name: 'rich checkbox buttons'
+        },
+        items:[
+          {
+            header: 'Широкий коридор',
+            content: 'Ширина коридоров в номере не менее 91 см.'
+          },
+          {
+            header: 'Помощник для инвалидов',
+            content: 'На 1 этаже вас встретит специалист и проводит до номера.'
+          }
+        ]
+      })
+  +layout__container({direction: 'column', padding_top: '1_7_5', padding_left: '1_9'})
+    +layout__container({height_max: '6_3'})
+      +range-slider({
+        data:{
+          name: 'range slider'
+        }
+      })
+    +layout__container({direction: 'column', height_max: '22_1'})
+      +layout__container({height_max: '7_8'})
+        +button({
+          content:'click me',
+          data: {
+            name: 'buttons'
+          },
+          theme: 'primary-gradient',
+          width: 'middle'
+        })
+        +layout__container({padding_left: '1_4', padding_top: '2_5'})
+          +button({
+            content:'click me',
+            theme: 'primary-gradient',
+            width: 'middle',
+            opacity: '05'
+          })
+      +layout__container({height_max: '4_3_5'})
+        +button({
+          content:'click me',
+          border: 'primary-gradient',
+          width: 'middle',
+        })
+        +layout__container({padding_left: '1_4'})
+          +button({
+            content:'click me',
+            border: 'primary-gradient',
+            width: 'middle',
+            opacity: '05'
+          })
+      +layout__container({height_max: '4_2_5'})
+        +button()
+        +layout__container({padding_left: '1_5_5'})
+          +button({
+            content:'click me',
+            color: 'dark_50'
+          })
+      +layout__container()
+        +button({
+          content:'перейти к оплате',
+          theme: 'primary-gradient',
+          width: 'large',
+          arrow: 'arrow'
+        })
+    +layout__container({padding_left: '0_1', height_max: '24'})
+      +pagination({
+        data:{
+          name: 'pagination'
+        }
+      })
+    +layout__container({height_max: '22_8_5'})
+      +drop-down({
+        data:{
+          name: 'dropdown',
+          data: 'guests'
+        },
+        content: '3 гостя',
+        items: [
+          {
+          data__counter: '1',
+          name: 'Взрослые',
+          counter: '2',
+          },
+          {
+          data__counter: '2',
+          name: 'Дети',
+          counter: '1'},
+          {
+          data__counter: '3',
+          name: 'Младенцы',
+          counter: '0'},
+          ]
+      })
+    +layout__container()
+      +bullet({
+        data:{
+          name: 'bullet list'
+        },
+        items: [
+          {name: 'Нельзя с питомцами'},
+          {name: 'Без вечеринок и мероприятий'},
+          {name: 'Время прибытия — после 13:00, а выезд до 12:00'},
+        ]
+      })
+

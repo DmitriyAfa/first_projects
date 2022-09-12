@@ -1,0 +1,24 @@
+/***** Variables *****/
+$xxs: 320px;
+$xs: 575px;
+$sm: 767px;
+$md: 991px;
+$lg: 1199px;
+$xl: 1440px;
+
+$color-first: #ffffff;
+$color-second: #f4f4f6;
+
+$color-dark-100: #1f2041;
+$color-dark-75: rgba(31, 32, 65, 0.75);
+$color-dark-50: rgba(31, 32, 65, 0.5);
+$color-dark-25: rgba(31, 32, 65, 0.25);
+$color-dark-05: rgba(31, 32, 65, 0.05);
+$color-primary: #bc9cff;
+$color-primary-gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$color-secondary: #6fcf97;
+$color-secondary-gradient: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+
+$border-50: 1px solid $color-dark-50;
+$border-25: 1px solid $color-dark-25;
+$border-05: 1px solid $color-dark-05;

@@ -1,0 +1,2036 @@
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/theme/global.scss ***!
+  \**************************************************************************************************************************************************************************************/
+/***** Variables *****/
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.woff2), url(../fonts/Montserrat-Regular.woff);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Bold.woff2), url(../fonts/Montserrat-Bold.woff);
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(../fonts/Quicksand-Bold.woff2), url(../fonts/Quicksand-Bold.woff);
+  font-style: normal;
+  font-weight: 700;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Montserrat, serif, "sans-serif";
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+h1,
+h2,
+h3 {
+  font-family: Montserrat, serif, "sans-serif";
+  font-weight: 700;
+  font-style: normal;
+  line-height: 24px;
+  color: #1f2041;
+}
+
+h1 {
+  font-size: 1.7rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.009rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+}
+
+h3 {
+  font-size: 0.81rem;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/bullet/bullet.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.bullet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 18rem;
+}
+.bullet__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+.bullet__lists {
+  display: flex;
+  flex-direction: column;
+}
+.bullet__list {
+  display: flex;
+  min-width: 18.5rem;
+  margin: 0 0 0.7rem 0;
+}
+.bullet__wrapper {
+  height: 1.5rem;
+  padding-top: 0.45rem;
+}
+.bullet__ellipse {
+  border-radius: 22px;
+  min-width: 0.75rem;
+  height: 0.7rem;
+  background: rgba(31, 32, 65, 0.25);
+}
+.bullet__content {
+  color: rgba(31, 32, 65, 0.75);
+  margin: 0 0px 0px 0.73rem;
+}
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/button/button.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.button__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.button__header h3:last-child {
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+}
+.button__element {
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  border-radius: 22px;
+  height: 3.1rem;
+  background: none;
+}
+.button__element h3 {
+  color: #bc9cff;
+}
+.button__element_width_middle {
+  width: 7.1rem;
+}
+.button__element_width_large {
+  width: 22.85rem;
+}
+.button__element_line_height_3_6 h3 {
+  line-height: 3.6rem;
+}
+.button__element_color_dark_50 h3 {
+  color: rgba(31, 32, 65, 0.5);
+}
+.button__element_theme_primary-gradient {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+.button__element_theme_primary-gradient h3 {
+  color: #ffffff;
+}
+.button__element_border_primary-gradient {
+  border: 2px solid #8ba5f9;
+}
+.button__element_border_primary-gradient h3 {
+  color: #bc9cff;
+}
+.button__element_opacity_05 {
+  opacity: 0.5;
+}
+.button__element_arrow::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 24px;
+  position: absolute;
+  background: url(../img/button__arrow_forward.svg) no-repeat;
+  background-position-x: 20.4rem;
+}
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/checkbox/checkbox.scss ***!
+  \******************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.checkbox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.checkbox__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+.checkbox__header h3:last-child {
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+}
+.checkbox__header-h3 {
+  margin-right: 3rem;
+}
+.checkbox__header-button {
+  width: 1.5rem;
+  border: 0;
+  cursor: pointer;
+  background: url(../img/down.svg);
+}
+.checkbox__header-button_expanded {
+  background: url(../img/expand_up.svg);
+}
+.checkbox__element {
+  display: flex;
+  flex-direction: column;
+}
+.checkbox__element_expanded {
+  margin-top: 0.1rem;
+}
+.checkbox__element_none {
+  display: none;
+}
+.checkbox__element-checkbox {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+.checkbox__element-checkbox[data-element=rich] {
+  margin-bottom: 0.6rem;
+}
+.checkbox__element-checkbox[data-element=rich]:nth-child(2) .checkbox__element-content {
+  width: 16rem;
+}
+.checkbox__element-box {
+  display: flex;
+  min-width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.checkbox__element-box_checked {
+  border: 1px solid #bc9cff;
+}
+.checkbox__element-box .checkbox__element-tick {
+  display: none;
+  width: 8px;
+  height: 6px;
+  border-top: 2px solid #bc9cff;
+  border-right: 2px solid #bc9cff;
+  border-left: white;
+  border-bottom: white;
+  transform: rotate(135deg);
+}
+.checkbox__element-box .checkbox__element-tick_checked {
+  display: block;
+  position: relative;
+  z-index: -1;
+}
+.checkbox__element-content {
+  width: 14rem;
+  color: rgba(31, 32, 65, 0.5);
+  margin-left: 0.7rem;
+  line-height: 18px;
+}
+.checkbox__element-contents {
+  min-width: 16rem;
+  color: rgba(31, 32, 65, 0.5);
+  margin-left: 0.7rem;
+  line-height: 18px;
+}
+.checkbox__element-contents h3.checkbox__element-contents-header {
+  text-transform: none;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+.checkbox__element-contents .checkbox__element-content {
+  display: block;
+  margin: 0;
+  line-height: 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.004rem;
+  padding: 4px 0 0 0;
+}
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/date-dropdown/date-dropdown.scss ***!
+  \****************************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.date-dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.date-dropdown__header {
+  display: flex;
+  justify-content: space-between;
+}
+.date-dropdown__header h3:last-child {
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+}
+.date-dropdown__element {
+  background: url(../img/down.svg) no-repeat;
+  background-position-x: 16.5rem;
+  background-position-y: 0.7rem;
+  color: rgba(31, 32, 65, 0.75);
+  cursor: pointer;
+  flex-grow: 1;
+  outline: none;
+  width: 19rem;
+  height: 3.15rem;
+  padding: 0.4rem 1rem 0.6rem;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  font-family: Montserrat, serif, "sans-serif";
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.date-dropdown__element_size_medium {
+  width: 10.7rem;
+  background-position-x: 8.2rem;
+  background-position-y: 0.7rem;
+}
+.date-dropdown__element:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.date-dropdown__element:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.date-dropdown__label {
+  display: flex;
+  align-items: center;
+}
+.date-dropdown__toggle, .date-dropdown__tick-box {
+  flex: 0 0 auto;
+}
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/drop-down/drop-down.scss ***!
+  \********************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.drop-down {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.drop-down__header {
+  display: flex;
+  justify-content: space-between;
+}
+.drop-down__header h3 {
+  letter-spacing: 0.05rem;
+}
+.drop-down__header h3:last-child {
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+}
+.drop-down__label {
+  display: flex;
+  flex-direction: column;
+  width: 22.85rem;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  font-family: Montserrat, serif, "sans-serif";
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.drop-down__label_size_medium {
+  width: 19rem;
+}
+.drop-down__label:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.drop-down__label:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.drop-down__content {
+  height: 2.85rem;
+  padding-left: 1rem;
+  padding-top: 8px;
+  background: url(../img/down.svg) no-repeat right;
+  background-position-x: 96.3%;
+  background-position-y: 52%;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+.drop-down__item {
+  display: none;
+}
+.drop-down__footer {
+  display: none;
+}
+
+.drop-down__label.drop-down__label_expanded {
+  border-radius: 4px;
+}
+.drop-down__label.drop-down__label_expanded:focus .drop-down__content {
+  border-bottom: 1px solid rgba(31, 32, 65, 0.5);
+}
+.drop-down__label.drop-down__label_expanded:hover .drop-down__content {
+  border-bottom: 1px solid rgba(31, 32, 65, 0.5);
+}
+.drop-down__label.drop-down__label_expanded .drop-down__content {
+  height: 3rem;
+  padding-left: 1rem;
+  padding-top: 8px;
+  background: url(../img/down.svg) no-repeat right;
+  background-position-x: 96.3%;
+  background-position-y: 48%;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+  margin-bottom: 2px;
+}
+.drop-down__label.drop-down__label_expanded .drop-down__item {
+  padding-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.65rem;
+}
+.drop-down__label.drop-down__label_expanded .drop-down__item:last-child {
+  margin-bottom: 0.3rem;
+}
+.drop-down__label.drop-down__label_expanded .drop-down__counter {
+  display: flex;
+  margin-right: 6px;
+  padding-top: 3px;
+}
+.drop-down__label.drop-down__label_expanded .drop-down__counter .drop-down__math {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 22px;
+  border: 1px solid rgba(31, 32, 65, 0.05);
+  color: rgba(31, 32, 65, 0.05);
+}
+.drop-down__label.drop-down__label_expanded .drop-down__counter .drop-down__math_actived {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  color: rgba(31, 32, 65, 0.25);
+}
+.drop-down__label.drop-down__label_expanded .drop-down__counter .drop-down__math-counter {
+  display: block;
+  line-height: 1.9rem;
+  width: 2.3rem;
+  text-align: center;
+}
+.drop-down__label.drop-down__label_expanded .drop-down__footer {
+  display: flex;
+  padding-left: 0.95rem;
+}
+.drop-down__label.drop-down__label_expanded .drop-down__footer div:first-child {
+  visibility: hidden;
+  margin-right: 10.35rem;
+}
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/evalution/evalution.scss ***!
+  \********************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.evalution {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.evalution__list {
+  display: flex;
+  width: 20rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  margin-bottom: 1.5rem;
+}
+.evalution__list[data-type=rewiew] {
+  padding-bottom: 0;
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+.evalution__img {
+  margin-right: 0.75rem;
+}
+.evalution__img[data-type=rewiew] {
+  margin-right: 0.7rem;
+}
+.evalution__content {
+  color: rgba(31, 32, 65, 0.75);
+}
+.evalution__rewiew {
+  display: flex;
+}
+.evalution__like {
+  display: inline-block;
+  padding-left: 0.25rem;
+  padding-top: 0.85rem;
+}
+.evalution__comment {
+  display: inline-block;
+  padding: 0.7rem 0 0 1rem;
+  width: 47.6rem;
+}
+
+h3.evalution__content-header {
+  font-size: 1rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgba(31, 32, 65, 0.75);
+}
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/header/header.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/input/input.scss ***!
+  \************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 22.85rem;
+}
+.input[data-name=subscription-text-field] {
+  width: 19rem;
+}
+.input[data-name=subscription-text-field] .input__elements {
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+}
+.input[data-name=subscription-text-field] .input__elements:focus {
+  color: rgba(31, 32, 65, 0.75);
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.input[data-name=subscription-text-field] .input__elements:hover {
+  color: rgba(31, 32, 65, 0.75);
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.input[data-name=subscription-text-field] .input__element {
+  border: 0;
+  height: 3rem;
+}
+.input[data-name=subscription-text-field] .input__btn {
+  width: 4rem;
+  height: 3rem;
+  border: 0;
+  background: url(../img/arrow_forward.svg) no-repeat;
+  cursor: pointer;
+  background-position-x: 1.65rem;
+  background-position-y: center;
+}
+.input_size_medium {
+  width: 10.7rem;
+}
+.input_size_medium[type=email] {
+  width: 19rem;
+  background: url(../img/arrow_forward.svg) no-repeat;
+  background-position-x: 16.6rem;
+  background-position-y: 0.66rem;
+}
+.input__header {
+  display: flex;
+  justify-content: space-between;
+}
+.input__header h3:last-child {
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+}
+.input__element {
+  flex-grow: 1;
+  outline: none;
+  height: 3.15rem;
+  color: rgba(31, 32, 65, 0.25);
+  padding: 0.43rem 1rem;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  font-family: Montserrat, serif, "sans-serif";
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: -0.012rem;
+}
+.input__element::-moz-placeholder {
+  font-family: Montserrat, serif, "sans-serif";
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.input__element:-ms-input-placeholder {
+  font-family: Montserrat, serif, "sans-serif";
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.input__element::placeholder {
+  font-family: Montserrat, serif, "sans-serif";
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.input__element:focus {
+  color: rgba(31, 32, 65, 0.75);
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.input__element:hover {
+  color: rgba(31, 32, 65, 0.75);
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.input__element[type=checkbox], .input__element[type=radio] {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  visibility: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.input__element[type=checkbox].focus-visible, .input__element[type=radio].focus-visible {
+  outline: none;
+}
+.input__element[type=checkbox]:focus-visible, .input__element[type=radio]:focus-visible {
+  outline: none;
+}
+.input__element[type=date] {
+  text-transform: uppercase;
+  letter-spacing: -0.05rem;
+}
+.input__element[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.input__label {
+  display: flex;
+  align-items: center;
+}
+.input__label-text {
+  padding: 0.43rem 1rem;
+  color: #888;
+  font-size: 1.2rem;
+}
+.input__toggle, .input__tick-box {
+  flex: 0 0 auto;
+}
+.input__validation {
+  position: relative;
+  display: flex;
+  min-width: 6rem;
+  margin-left: 1rem;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+.input__validation::after {
+  position: absolute;
+  top: calc(50% - 0.25rem);
+  left: -0.25rem;
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  content: "";
+  transform: rotate(45deg);
+  border-bottom-left-radius: 1px;
+  background-color: inherit;
+}
+.input__validation-ok, .input__validation-error {
+  text-transform: uppercase;
+  color: white;
+  font-family: LatoBlack, sans-serif;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.input__element:valid + .input__validation {
+  background-color: #ffffff;
+}
+.input__element:valid + .input__validation .input__validation-ok {
+  display: inline;
+}
+.input__element:valid + .input__validation .input__validation-error {
+  display: none;
+}
+.input__element:invalid + .input__validation {
+  background-color: #f4f4f6;
+}
+.input__element:invalid + .input__validation .input__validation-ok {
+  display: none;
+}
+.input__element:invalid + .input__validation .input__validation-error {
+  display: inline;
+}
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/layout/layout.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 1440px;
+  background-color: #ffffff;
+}
+.layout__header {
+  display: flex;
+}
+.layout__main {
+  display: flex;
+}
+.layout__footer {
+  display: flex;
+}
+.layout__container {
+  display: flex;
+  flex: 1 1 100%;
+  align-content: flex-start;
+}
+.layout__container_weight_400 h1,
+.layout__container_weight_400 h2,
+.layout__container_weight_400 h3 {
+  font-weight: 400;
+}
+.layout__container_text_transform {
+  text-transform: uppercase;
+}
+.layout__container_color_dark_25 h1,
+.layout__container_color_dark_25 h2,
+.layout__container_color_dark_25 h3,
+.layout__container_color_dark_25 span {
+  color: rgba(31, 32, 65, 0.25);
+}
+.layout__container_position {
+  position: absolute;
+}
+.layout__container_position_one {
+  left: 141px;
+  top: 139px;
+}
+.layout__container_position_two {
+  left: 141px;
+  top: 223px;
+}
+.layout__container_position_three {
+  left: 141px;
+  top: 307.44px;
+}
+.layout__container_position_four {
+  left: 141px;
+  top: 394px;
+}
+.layout__container_position_five {
+  left: 141px;
+  top: 498px;
+}
+.layout__container_position_six {
+  left: 311px;
+  top: 498px;
+}
+.layout__container_position_seven {
+  left: 141px;
+  top: 603px;
+}
+.layout__container_position_8 {
+  left: 140px;
+  top: 708px;
+}
+.layout__container_position_9 {
+  left: 587px;
+  top: 140px;
+}
+.layout__container_position_10 {
+  left: 587px;
+  top: 309px;
+}
+.layout__container_position_11 {
+  left: 587px;
+  top: 400.56px;
+}
+.layout__container_position_12 {
+  left: 587px;
+  top: 530px;
+}
+.layout__container_position_13 {
+  left: 587px;
+  top: 621px;
+}
+.layout__container_position_14 {
+  left: 979px;
+  top: 139px;
+}
+.layout__container_position_15 {
+  left: 980px;
+  top: 227px;
+}
+.layout__container_position_15_1 {
+  left: 1098px;
+  top: 262px;
+}
+.layout__container_position_15_2 {
+  left: 979px;
+  top: 336px;
+}
+.layout__container_position_15_3 {
+  left: 1098px;
+  top: 336px;
+}
+.layout__container_position_15_4 {
+  left: 980px;
+  top: 397px;
+}
+.layout__container_position_15_5 {
+  left: 1061px;
+  top: 397px;
+}
+.layout__container_position_15_6 {
+  left: 979px;
+  top: 456px;
+}
+.layout__container_position_16 {
+  position: absolute;
+  left: 980px;
+  top: 535px;
+}
+.layout__container_position_17 {
+  position: absolute;
+  left: 140px;
+  top: 872px;
+}
+.layout__container_position_18 {
+  position: absolute;
+  left: 140px;
+  top: 956px;
+}
+.layout__container_position_19 {
+  position: absolute;
+  left: 587px;
+  top: 872px;
+}
+.layout__container_position_20 {
+  position: absolute;
+  left: 979px;
+  top: 872px;
+}
+.layout__container_position_21 {
+  position: absolute;
+  left: 141px;
+  top: 1192px;
+}
+.layout__container_position_22 {
+  position: absolute;
+  left: 140px;
+  top: 1256px;
+}
+.layout__container_position_23 {
+  position: absolute;
+  left: 587px;
+  top: 1192px;
+}
+.layout__container_position_24 {
+  position: absolute;
+  left: 979px;
+  top: 1192px;
+}
+.layout__container_position_25 {
+  position: absolute;
+  left: 140px;
+  top: 1564px;
+}
+.layout__container_position_26 {
+  position: absolute;
+  left: 587px;
+  top: 1574px;
+}
+.layout__container_text_align_center {
+  text-align: center;
+}
+.layout__container_text_align_right {
+  text-align: right;
+}
+.layout__container_border_25 {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+}
+.layout__container_border_50 {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.layout__container_border_radius_4 {
+  border-radius: 4px;
+}
+.layout__container_hover_50:hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.layout__container_hover_50:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+.layout__container_padding_5.layout__container {
+  padding: 5px;
+}
+.layout__container_padding_10.layout__container {
+  padding: 10px;
+}
+.layout__container_padding_15.layout__container {
+  padding: 15px;
+}
+.layout__container_padding_20.layout__container {
+  padding: 20px;
+}
+.layout__container_padding_25.layout__container {
+  padding: 25px;
+}
+.layout__container_padding_30.layout__container {
+  padding: 30px;
+}
+.layout__container_padding_35.layout__container {
+  padding: 35px;
+}
+.layout__container_padding_40.layout__container {
+  padding: 40px;
+}
+.layout__container_padding_45.layout__container {
+  padding: 45px;
+}
+.layout__container_padding_top_10.layout__container {
+  padding-top: 10px;
+}
+.layout__container_padding_top_20.layout__container {
+  padding-top: 20px;
+}
+.layout__container_padding_top_30.layout__container {
+  padding-top: 30px;
+}
+.layout__container_padding_top_40.layout__container {
+  padding-top: 40px;
+}
+.layout__container_padding_top_50.layout__container {
+  padding-top: 50px;
+}
+.layout__container_padding_top_60.layout__container {
+  padding-top: 60px;
+}
+.layout__container_padding_top_70.layout__container {
+  padding-top: 70px;
+}
+.layout__container_padding_top_80.layout__container {
+  padding-top: 80px;
+}
+.layout__container_padding_top_90.layout__container {
+  padding-top: 90px;
+}
+.layout__container_padding_top_100.layout__container {
+  padding-top: 100px;
+}
+.layout__container_padding_top_110.layout__container {
+  padding-top: 110px;
+}
+.layout__container_padding_top_120.layout__container {
+  padding-top: 120px;
+}
+.layout__container_padding_top_130.layout__container {
+  padding-top: 130px;
+}
+.layout__container_padding_top_140.layout__container {
+  padding-top: 140px;
+}
+.layout__container_padding_top_150.layout__container {
+  padding-top: 150px;
+}
+.layout__container_padding_right_10.layout__container {
+  padding-right: 10px;
+}
+.layout__container_padding_right_20.layout__container {
+  padding-right: 20px;
+}
+.layout__container_padding_right_30.layout__container {
+  padding-right: 30px;
+}
+.layout__container_padding_right_40.layout__container {
+  padding-right: 40px;
+}
+.layout__container_padding_right_50.layout__container {
+  padding-right: 50px;
+}
+.layout__container_padding_right_60.layout__container {
+  padding-right: 60px;
+}
+.layout__container_padding_right_70.layout__container {
+  padding-right: 70px;
+}
+.layout__container_padding_right_80.layout__container {
+  padding-right: 80px;
+}
+.layout__container_padding_right_90.layout__container {
+  padding-right: 90px;
+}
+.layout__container_padding_right_100.layout__container {
+  padding-right: 100px;
+}
+.layout__container_padding_right_110.layout__container {
+  padding-right: 110px;
+}
+.layout__container_padding_right_120.layout__container {
+  padding-right: 120px;
+}
+.layout__container_padding_right_130.layout__container {
+  padding-right: 130px;
+}
+.layout__container_padding_right_140.layout__container {
+  padding-right: 140px;
+}
+.layout__container_padding_right_150.layout__container {
+  padding-right: 150px;
+}
+.layout__container_padding_bottom_10.layout__container {
+  padding-bottom: 10px;
+}
+.layout__container_padding_bottom_20.layout__container {
+  padding-bottom: 20px;
+}
+.layout__container_padding_bottom_30.layout__container {
+  padding-bottom: 30px;
+}
+.layout__container_padding_bottom_40.layout__container {
+  padding-bottom: 40px;
+}
+.layout__container_padding_bottom_50.layout__container {
+  padding-bottom: 50px;
+}
+.layout__container_padding_bottom_60.layout__container {
+  padding-bottom: 60px;
+}
+.layout__container_padding_bottom_70.layout__container {
+  padding-bottom: 70px;
+}
+.layout__container_padding_bottom_80.layout__container {
+  padding-bottom: 80px;
+}
+.layout__container_padding_bottom_90.layout__container {
+  padding-bottom: 90px;
+}
+.layout__container_padding_bottom_100.layout__container {
+  padding-bottom: 100px;
+}
+.layout__container_padding_bottom_110.layout__container {
+  padding-bottom: 110px;
+}
+.layout__container_padding_bottom_120.layout__container {
+  padding-bottom: 120px;
+}
+.layout__container_padding_bottom_130.layout__container {
+  padding-bottom: 130px;
+}
+.layout__container_padding_bottom_140.layout__container {
+  padding-bottom: 140px;
+}
+.layout__container_padding_bottom_150.layout__container {
+  padding-bottom: 150px;
+}
+.layout__container_padding_bottom_1.layout__container {
+  padding-bottom: 1px;
+}
+.layout__container_padding_bottom_2.layout__container {
+  padding-bottom: 2px;
+}
+.layout__container_padding_bottom_3.layout__container {
+  padding-bottom: 3px;
+}
+.layout__container_padding_bottom_4.layout__container {
+  padding-bottom: 4px;
+}
+.layout__container_padding_bottom_5.layout__container {
+  padding-bottom: 5px;
+}
+.layout__container_padding_bottom_6.layout__container {
+  padding-bottom: 6px;
+}
+.layout__container_padding_bottom_7.layout__container {
+  padding-bottom: 7px;
+}
+.layout__container_padding_bottom_8.layout__container {
+  padding-bottom: 8px;
+}
+.layout__container_padding_bottom_9.layout__container {
+  padding-bottom: 9px;
+}
+.layout__container_padding_bottom_10.layout__container {
+  padding-bottom: 10px;
+}
+.layout__container_padding_bottom_11.layout__container {
+  padding-bottom: 11px;
+}
+.layout__container_padding_bottom_12.layout__container {
+  padding-bottom: 12px;
+}
+.layout__container_padding_bottom_13.layout__container {
+  padding-bottom: 13px;
+}
+.layout__container_padding_bottom_14.layout__container {
+  padding-bottom: 14px;
+}
+.layout__container_padding_bottom_15.layout__container {
+  padding-bottom: 15px;
+}
+.layout__container_padding_left_10.layout__container {
+  padding-left: 10px;
+}
+.layout__container_padding_left_20.layout__container {
+  padding-left: 20px;
+}
+.layout__container_padding_left_30.layout__container {
+  padding-left: 30px;
+}
+.layout__container_padding_left_40.layout__container {
+  padding-left: 40px;
+}
+.layout__container_padding_left_50.layout__container {
+  padding-left: 50px;
+}
+.layout__container_padding_left_60.layout__container {
+  padding-left: 60px;
+}
+.layout__container_padding_left_70.layout__container {
+  padding-left: 70px;
+}
+.layout__container_padding_left_80.layout__container {
+  padding-left: 80px;
+}
+.layout__container_padding_left_90.layout__container {
+  padding-left: 90px;
+}
+.layout__container_padding_left_100.layout__container {
+  padding-left: 100px;
+}
+.layout__container_padding_left_110.layout__container {
+  padding-left: 110px;
+}
+.layout__container_padding_left_120.layout__container {
+  padding-left: 120px;
+}
+.layout__container_padding_left_130.layout__container {
+  padding-left: 130px;
+}
+.layout__container_padding_left_140.layout__container {
+  padding-left: 140px;
+}
+.layout__container_padding_left_150.layout__container {
+  padding-left: 150px;
+}
+.layout__container_padding_2_1 {
+  padding: 2.1rem;
+}
+.layout__container_padding_top_0_7 {
+  padding-top: 0.7rem;
+}
+.layout__container_padding_top_0_9 {
+  padding-top: 0.9rem;
+}
+.layout__container_padding_top_1_1 {
+  padding-top: 1.1rem;
+}
+.layout__container_padding_top_1_1_5 {
+  padding-top: 1.15rem;
+}
+.layout__container_padding_top_1_3 {
+  padding-top: 1.3rem;
+}
+.layout__container_padding_top_1_7_5 {
+  padding-top: 1.75rem;
+}
+.layout__container_padding_top_2_1 {
+  padding-top: 2.1rem;
+}
+.layout__container_padding_top_2_4 {
+  padding-top: 2.4rem;
+}
+.layout__container_padding_top_2_5 {
+  padding-top: 2.5rem;
+}
+.layout__container_padding_top_2_6 {
+  padding-top: 2.6rem;
+}
+.layout__container_padding_top_2_6_5 {
+  padding-top: 2.65rem;
+}
+.layout__container_padding_top_2_7 {
+  padding-top: 2.7rem;
+}
+.layout__container_padding_top_2_9 {
+  padding-top: 1.9rem;
+}
+.layout__container_padding_top_6 {
+  padding-top: 6.5px;
+}
+.layout__container_padding_top_6_8_5 {
+  padding-top: 6.85rem;
+}
+.layout__container_padding_bottom_0_3 {
+  padding-bottom: 0.3rem;
+}
+.layout__container_padding_left_0_1 {
+  padding-left: 0.1rem;
+}
+.layout__container_padding_left_1_4 {
+  padding-left: 1.4rem;
+}
+.layout__container_padding_left_1_5_5 {
+  padding-left: 1.55rem;
+}
+.layout__container_padding_left_1_9 {
+  padding-left: 1.9rem;
+}
+.layout__container_padding_left_2_9 {
+  padding-left: 2.9rem;
+}
+.layout__container_padding_left_10_0_5 {
+  padding-left: 10.05rem;
+}
+.layout__container_padding_left_10_7 {
+  padding-left: 10.7rem;
+}
+.layout__container_padding_left_17 {
+  padding-left: 17px;
+}
+.layout__container_margin_5.layout__container {
+  margin: 5px;
+}
+.layout__container_margin_10.layout__container {
+  margin: 10px;
+}
+.layout__container_margin_15.layout__container {
+  margin: 15px;
+}
+.layout__container_margin_20.layout__container {
+  margin: 20px;
+}
+.layout__container_margin_25.layout__container {
+  margin: 25px;
+}
+.layout__container_margin_30.layout__container {
+  margin: 30px;
+}
+.layout__container_margin_35.layout__container {
+  margin: 35px;
+}
+.layout__container_margin_40.layout__container {
+  margin: 40px;
+}
+.layout__container_margin_45.layout__container {
+  margin: 45px;
+}
+.layout__container_margin_top_10.layout__container {
+  margin-top: 10px;
+}
+.layout__container_margin_top_20.layout__container {
+  margin-top: 20px;
+}
+.layout__container_margin_top_30.layout__container {
+  margin-top: 30px;
+}
+.layout__container_margin_top_40.layout__container {
+  margin-top: 40px;
+}
+.layout__container_margin_top_50.layout__container {
+  margin-top: 50px;
+}
+.layout__container_margin_top_60.layout__container {
+  margin-top: 60px;
+}
+.layout__container_margin_top_70.layout__container {
+  margin-top: 70px;
+}
+.layout__container_margin_top_80.layout__container {
+  margin-top: 80px;
+}
+.layout__container_margin_top_90.layout__container {
+  margin-top: 90px;
+}
+.layout__container_margin_top_100.layout__container {
+  margin-top: 100px;
+}
+.layout__container_margin_top_110.layout__container {
+  margin-top: 110px;
+}
+.layout__container_margin_top_120.layout__container {
+  margin-top: 120px;
+}
+.layout__container_margin_top_130.layout__container {
+  margin-top: 130px;
+}
+.layout__container_margin_top_140.layout__container {
+  margin-top: 140px;
+}
+.layout__container_margin_top_150.layout__container {
+  margin-top: 150px;
+}
+.layout__container_margin_right_10.layout__container {
+  margin-right: 10px;
+}
+.layout__container_margin_right_20.layout__container {
+  margin-right: 20px;
+}
+.layout__container_margin_right_30.layout__container {
+  margin-right: 30px;
+}
+.layout__container_margin_right_40.layout__container {
+  margin-right: 40px;
+}
+.layout__container_margin_right_50.layout__container {
+  margin-right: 50px;
+}
+.layout__container_margin_right_60.layout__container {
+  margin-right: 60px;
+}
+.layout__container_margin_right_70.layout__container {
+  margin-right: 70px;
+}
+.layout__container_margin_right_80.layout__container {
+  margin-right: 80px;
+}
+.layout__container_margin_right_90.layout__container {
+  margin-right: 90px;
+}
+.layout__container_margin_right_100.layout__container {
+  margin-right: 100px;
+}
+.layout__container_margin_right_110.layout__container {
+  margin-right: 110px;
+}
+.layout__container_margin_right_120.layout__container {
+  margin-right: 120px;
+}
+.layout__container_margin_right_130.layout__container {
+  margin-right: 130px;
+}
+.layout__container_margin_right_140.layout__container {
+  margin-right: 140px;
+}
+.layout__container_margin_right_150.layout__container {
+  margin-right: 150px;
+}
+.layout__container_margin_bottom_10.layout__container {
+  margin-bottom: 10px;
+}
+.layout__container_margin_bottom_20.layout__container {
+  margin-bottom: 20px;
+}
+.layout__container_margin_bottom_30.layout__container {
+  margin-bottom: 30px;
+}
+.layout__container_margin_bottom_40.layout__container {
+  margin-bottom: 40px;
+}
+.layout__container_margin_bottom_50.layout__container {
+  margin-bottom: 50px;
+}
+.layout__container_margin_bottom_60.layout__container {
+  margin-bottom: 60px;
+}
+.layout__container_margin_bottom_70.layout__container {
+  margin-bottom: 70px;
+}
+.layout__container_margin_bottom_80.layout__container {
+  margin-bottom: 80px;
+}
+.layout__container_margin_bottom_90.layout__container {
+  margin-bottom: 90px;
+}
+.layout__container_margin_bottom_100.layout__container {
+  margin-bottom: 100px;
+}
+.layout__container_margin_bottom_110.layout__container {
+  margin-bottom: 110px;
+}
+.layout__container_margin_bottom_120.layout__container {
+  margin-bottom: 120px;
+}
+.layout__container_margin_bottom_130.layout__container {
+  margin-bottom: 130px;
+}
+.layout__container_margin_bottom_140.layout__container {
+  margin-bottom: 140px;
+}
+.layout__container_margin_bottom_150.layout__container {
+  margin-bottom: 150px;
+}
+.layout__container_margin_left_10.layout__container {
+  margin-left: 10px;
+}
+.layout__container_margin_left_20.layout__container {
+  margin-left: 20px;
+}
+.layout__container_margin_left_30.layout__container {
+  margin-left: 30px;
+}
+.layout__container_margin_left_40.layout__container {
+  margin-left: 40px;
+}
+.layout__container_margin_left_50.layout__container {
+  margin-left: 50px;
+}
+.layout__container_margin_left_60.layout__container {
+  margin-left: 60px;
+}
+.layout__container_margin_left_70.layout__container {
+  margin-left: 70px;
+}
+.layout__container_margin_left_80.layout__container {
+  margin-left: 80px;
+}
+.layout__container_margin_left_90.layout__container {
+  margin-left: 90px;
+}
+.layout__container_margin_left_100.layout__container {
+  margin-left: 100px;
+}
+.layout__container_margin_left_110.layout__container {
+  margin-left: 110px;
+}
+.layout__container_margin_left_120.layout__container {
+  margin-left: 120px;
+}
+.layout__container_margin_left_130.layout__container {
+  margin-left: 130px;
+}
+.layout__container_margin_left_140.layout__container {
+  margin-left: 140px;
+}
+.layout__container_margin_left_150.layout__container {
+  margin-left: 150px;
+}
+.layout__container_margin_top_1 {
+  margin-top: 1px;
+}
+.layout__container_margin_top_3 {
+  margin-top: 3px;
+}
+.layout__container_margin_top_5 {
+  margin-top: 5px;
+}
+.layout__container_margin_top_25 {
+  margin-top: 25px;
+}
+.layout__container_margin_top_29 {
+  margin-top: 29px;
+}
+.layout__container_margin_top_33 {
+  margin-top: 33px;
+}
+.layout__container_margin_top_67 {
+  margin-top: 67px;
+}
+.layout__container_margin_right_1_5 {
+  margin-right: 1.5rem;
+}
+.layout__container_margin_left_1_5 {
+  margin-left: 1.5rem;
+}
+.layout__container_margin_left_2_2 {
+  margin-left: 2.2rem;
+}
+.layout__container_margin_left_141 {
+  margin-left: 141px;
+}
+.layout__container_margin_bottom_1_45 {
+  margin-bottom: 1.45rem;
+}
+.layout__container_width_42 {
+  width: 42px;
+}
+.layout__container_width_40 {
+  width: 40rem;
+}
+.layout__container_width_44 {
+  width: 44px;
+}
+.layout__container_width_320 {
+  width: 320px;
+}
+.layout__container_width_max_22 {
+  max-width: 22.6%;
+}
+.layout__container_width_max_26 {
+  max-width: 26%;
+}
+.layout__container_width_max_28 {
+  max-width: 28rem;
+}
+.layout__container_width_max_40 {
+  max-width: 40rem;
+}
+.layout__container_width_max_44 {
+  max-width: 44%;
+}
+.layout__container_width_max_54 {
+  max-width: 54%;
+}
+.layout__container_width_max_55 {
+  max-width: 55%;
+}
+.layout__container_width_max_64 {
+  max-width: 64%;
+}
+.layout__container_width_50 {
+  max-width: 50%;
+}
+.layout__container_height_4_6 {
+  height: 4.6rem;
+}
+.layout__container_height_18 {
+  height: 18rem;
+}
+.layout__container_height_22 {
+  height: 22rem;
+}
+.layout__container_height_42 {
+  height: 42px;
+}
+.layout__container_height_44 {
+  height: 44px;
+}
+.layout__container_height_max_4_3_5 {
+  max-height: 4.35rem;
+}
+.layout__container_height_max_4_2_5 {
+  max-height: 4.25rem;
+}
+.layout__container_height_max_6_3 {
+  max-height: 6.3rem;
+}
+.layout__container_height_max_6_5_5 {
+  max-height: 6.55rem;
+}
+.layout__container_height_max_6_6 {
+  max-height: 6.6rem;
+}
+.layout__container_height_max_7_8 {
+  max-height: 7.8rem;
+}
+.layout__container_height_max_9_2_5 {
+  max-height: 9.25rem;
+}
+.layout__container_height_max_9_3 {
+  max-height: 9.3%;
+}
+.layout__container_height_max_10 {
+  max-height: 10%;
+}
+.layout__container_height_max_12_1 {
+  max-height: 12.1rem;
+}
+.layout__container_height_max_14_3 {
+  max-height: 14.3%;
+}
+.layout__container_height_max_17_9 {
+  max-height: 17.9rem;
+}
+.layout__container_height_max_20_2 {
+  max-height: 20.2%;
+}
+.layout__container_height_max_21_2 {
+  max-height: 21.2%;
+}
+.layout__container_height_max_22_1 {
+  max-height: 22.1rem;
+}
+.layout__container_height_max_22_8 {
+  max-height: 22.8rem;
+}
+.layout__container_height_max_22_8_5 {
+  max-height: 22.85rem;
+}
+.layout__container_height_max_24 {
+  max-height: 24rem;
+}
+.layout__container_height_max_25_2 {
+  max-height: 25.2%;
+}
+.layout__container_justify_between {
+  justify-content: space-between;
+}
+.layout__container_justify_around {
+  justify-content: space-around;
+}
+.layout__container_justify_evenly {
+  justify-content: space-evenly;
+}
+.layout__container_justify_stretch {
+  justify-content: stretch;
+}
+.layout__container_block {
+  display: block;
+}
+.layout__container_inline {
+  display: inline;
+}
+.layout__container_inline-block {
+  display: inline-block;
+}
+.layout__container_column {
+  flex-direction: column;
+}
+.layout__container_column > .layout__container {
+  flex-basis: auto;
+}
+.layout__container_column-reverse {
+  flex-direction: column-reverse;
+}
+.layout__container_column-reverse > .layout__container {
+  flex-basis: auto;
+}
+.layout__container_row-reverse {
+  flex-direction: row-reverse;
+}
+.layout__container_wrap {
+  flex-wrap: wrap;
+}
+.layout__container_wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.layout__container_basis-auto.layout__container {
+  flex-basis: auto;
+}
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/like/like.scss ***!
+  \**********************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.like {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.like__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.like__header h3:last-child {
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+}
+.like__elements {
+  display: flex;
+}
+.like__element {
+  color: rgba(31, 32, 65, 0.25);
+  display: flex;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  padding-left: 3px;
+  padding-top: 3px;
+}
+.like__element::before {
+  content: "";
+  width: 1rem;
+  background: url(../img/heart_border.svg) no-repeat;
+  background-position-x: 0.1rem;
+  background-position-y: 0.15rem;
+}
+.like__element_actived {
+  border: 1px solid #bc9cff;
+}
+.like__element_actived::before {
+  content: "";
+  width: 1rem;
+  background: url(../img/heart.svg) no-repeat;
+  background-position-x: 0.1rem;
+  background-position-y: 0.15rem;
+}
+.like__element:nth-child(2) {
+  margin-left: 10px;
+}
+.like__element.focus-visible {
+  outline: none;
+}
+.like__element:focus-visible {
+  outline: none;
+}
+.like__content {
+  width: 0.8rem;
+  text-align: right;
+  font-size: 0.7rem;
+  line-height: 0.8rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/pagination/pagination.scss ***!
+  \**********************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.pagination {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.pagination__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.pagination__header h3:last-child {
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+}
+.pagination__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pagination__container {
+  margin-bottom: 0.6rem;
+}
+.pagination__container .paginationjs-pages ul {
+  display: flex;
+}
+.pagination__container .paginationjs-pages ul li.paginationjs-page.active {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+}
+.pagination__container .paginationjs-pages ul li.paginationjs-page.active a {
+  color: #fff;
+  font-weight: bold;
+}
+.pagination__container .paginationjs-pages ul li.paginationjs-page {
+  width: 2.85rem;
+  border: 0;
+  height: 2.85rem;
+}
+.pagination__container .paginationjs-pages ul li.paginationjs-page a {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 42px;
+  color: rgba(31, 32, 65, 0.5);
+  height: 0;
+}
+.pagination__container .paginationjs-pages ul .paginationjs-prev.J-paginationjs-previous {
+  height: 2.85rem;
+  width: 2.85rem;
+  border-radius: 22px;
+  border: 0;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}
+.pagination__container .paginationjs-pages ul .paginationjs-prev.J-paginationjs-previous a {
+  height: 2.85rem;
+  border: 0;
+  border-radius: 22px;
+  background: url(../img/pagination__arrow_back.svg) no-repeat;
+  background-position-x: 0.5rem;
+  background-position-y: 0.6rem;
+}
+.pagination__container .paginationjs-pages ul .paginationjs-next.J-paginationjs-next {
+  height: 2.85rem;
+  width: 2.85rem;
+  border-radius: 22px;
+  border: 0;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}
+.pagination__container .paginationjs-pages ul .paginationjs-next.J-paginationjs-next a {
+  height: 2.85rem;
+  border: 0;
+  border-radius: 22px;
+  background: url(../img/pagination__arrow_forward.svg) no-repeat;
+  background-position-x: 0.5rem;
+  background-position-y: 0.6rem;
+}
+.pagination__container .paginationjs-pages li.paginationjs-ellipsis.disabled {
+  border: 0;
+}
+.pagination__container .paginationjs-pages li.paginationjs-ellipsis.disabled a {
+  min-width: 2.85rem;
+  height: 2.85rem;
+  line-height: 2.85rem;
+  display: block;
+  background: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  color: rgba(31, 32, 65, 0.5);
+  opacity: 1;
+}
+.pagination__footer {
+  padding-left: 0.35rem;
+}
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/radio/radio.scss ***!
+  \************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.radio {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.radio__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.radio__header h3:last-child {
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+}
+.radio__elements {
+  display: flex;
+}
+.radio__element {
+  display: flex;
+  margin-bottom: 0.75rem;
+  width: 8.4rem;
+}
+.radio__element-label {
+  min-width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  padding: 0.2rem 0px 0px 0.2rem;
+}
+.radio__element-ball {
+  display: none;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 10px;
+}
+.radio__element-content {
+  width: 14rem;
+  color: rgba(31, 32, 65, 0.5);
+  margin-left: 0.7rem;
+  line-height: 18px;
+}
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/range-slider/range-slider.scss ***!
+  \**************************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.range-slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.range-slider__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.3rem;
+}
+.range-slider__header h3:last-child {
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+}
+.range-slider__element {
+  width: 266px;
+}
+.range-slider .noUi-horizontal {
+  height: 6px;
+}
+.range-slider .noUi-target {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 3px;
+}
+.range-slider .noUi-handle {
+  width: 12px;
+  height: 12px;
+  box-shadow: none;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+}
+.range-slider .noUi-handle::before {
+  display: none;
+}
+.range-slider .noUi-handle::after {
+  display: none;
+}
+.range-slider .noUi-horizontal .noUi-handle {
+  width: 15px;
+  height: 15px;
+  right: -10px;
+  top: -5px;
+}
+.range-slider .noUi-connect {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/rate-button/rate-button.scss ***!
+  \************************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.rate {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.rate__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.rate__header h3:last-child {
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+}
+.rate__elements {
+  display: flex;
+}
+.rate-button {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.rate-button:nth-child(2) {
+  margin-left: 20px;
+}
+.rate-button input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-image: url(../img/star.svg);
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+}
+.rate-button input:hover {
+  background-image: url(../img/star_hovered.svg);
+}
+.rate-button input:checked {
+  background-image: url(../img/star_hovered.svg);
+}
+.rate-button input:nth-child(1):hover ~ input:nth-child(1n) {
+  background-image: url(../img/star_hovered.svg);
+}
+.rate-button input:nth-child(1):checked ~ input:nth-child(1n) {
+  background-image: url(../img/star_hovered.svg);
+}
+.rate-button input:nth-child(2):hover ~ input:nth-child(1n) {
+  background-image: url(../img/star_hovered.svg);
+}
+.rate-button input:nth-child(2):checked ~ input:nth-child(1n) {
+  background-image: url(../img/star_hovered.svg);
+}
+.rate-button input:nth-child(3):hover ~ input:nth-child(1n) {
+  background-image: url(../img/star_hovered.svg);
+}
+.rate-button input:nth-child(3):checked ~ input:nth-child(1n) {
+  background-image: url(../img/star_hovered.svg);
+}
+.rate-button input:nth-child(4):hover ~ input:nth-child(1n) {
+  background-image: url(../img/star_hovered.svg);
+}
+.rate-button input:nth-child(4):checked ~ input:nth-child(1n) {
+  background-image: url(../img/star_hovered.svg);
+}
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/components/toggle/toggle.scss ***!
+  \**************************************************************************************************************************************************************************************************/
+/***** Variables *****/
+.toggle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.toggle__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.toggle__header h3:last-child {
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+}
+.toggle__elements {
+  display: flex;
+  flex-direction: column;
+}
+.toggle__element {
+  display: flex;
+  margin-bottom: 1rem;
+  min-width: 8.4rem;
+}
+.toggle__element-label {
+  min-width: 40px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  padding: 0.2rem 0px 0px 0.2rem;
+}
+.toggle__element-ball {
+  width: 12px;
+  height: 12px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+}
+.toggle__element-content {
+  min-width: 14rem;
+  color: rgba(31, 32, 65, 0.75);
+  margin-left: 0.7rem;
+  line-height: 18px;
+}
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/base/base.scss ***!
+  \*****************************************************************************************************************************************************************************************/
+/***** Variables *****/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: #ffffff;
+}
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/pages/form-elements/form-elements.scss ***!
+  \***********************************************************************************************************************************************************************************************************/
+

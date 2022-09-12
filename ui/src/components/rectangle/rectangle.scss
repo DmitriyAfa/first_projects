@@ -1,0 +1,32 @@
+@import "../../theme/variables.scss";
+.rectangle {
+  min-width: 5rem;
+  min-height: 5rem;
+  border-radius: 6px;
+
+  &_theme {
+    &_dark {
+      &-100 {
+        background: $color-dark-100;
+      }
+      &-75 {
+        background: $color-dark-75;
+      }
+      &-50 {
+        background: $color-dark-50;
+      }
+      &-25 {
+        background: $color-dark-25;
+      }
+      &-05 {
+        background: $color-dark-05;
+      }
+    }
+    &_primary {
+      background: $color-primary;
+    }
+    &_secondary {
+      background: $color-secondary;
+    }
+  }
+}

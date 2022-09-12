@@ -1,0 +1,12 @@
+//-
+    options.theme = задает тему (цвет) и если есть задаст видимость, возможные значения: 'dark-100' (где 100 - это значение видимости) 
+    доступно: 100, 75, 50, 25, 05., 'primary', 'secondary'.
+mixin rectangle(options)
+    if !options
+        - options = {}
+
+    -
+        let classes = ''
+        classes += options.theme ? ' rectangle_theme_' + options.theme : ''
+
+    .rectangle(class= classes)

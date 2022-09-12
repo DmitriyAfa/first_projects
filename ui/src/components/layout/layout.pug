@@ -1,0 +1,96 @@
+mixin layout()
+  .layout
+    block
+
+mixin layout__header()
+  header.layout__header
+    block
+
+mixin layout__main()
+  main.layout__main
+    block
+
+mixin layout__footer()
+  footer.layout__footer
+    block
+
+//-
+  options.display - задает display, возможные значения 'block', 'inline', 'inline-block', по-умолчанию 'flex'
+  options.basis - задает flex-basis в пикселях, от 50 до 4000 с шагом 50 или auto, по-умолчанию 100%
+  options.grow - задает flex-grow, от 0 до 10, по-умолчанию 1
+  options.shrink - задает flex-shrink, от 0 до 10, по-умолчанию 1
+  options.wrap - задает flex-wrap, возможные значения 'wrap', 'wrap-reverse', по-умолчанию 'nowrap'
+  options.direction - задает flex-direction, возможные значения 'column', 'column-reverse',
+    'row-reverse', по-умолчанию 'row'
+  options.align - горизонтальное выравнивание относительно родительского контейнера,
+    не сработает если у соседнего контейнера flex-grow > 0,
+    возможные значения 'left', 'right', 'center'
+  options.mix - любая строка, будет добавлена в классы контейнера
+
+    options.margin - задает внутренний внешний отступ margin в пикселях, от 5 до 45 с шагом 5, по-умолчанию 0
+  options.margin_top - задает внутренний внешний отступ margin-top в пикселях, от 10 до 150 с шагом 10, по-умолчанию 0
+  options.margin_right - задает внутренний внешний отступ margin-right в пикселях, от 10 до 150 с шагом 10, по-умолчанию 0
+  options.margin_bottom - задает внутренний внешний отступ margin-bottom в пикселях, от 10 до 150 с шагом 10, по-умолчанию 0
+  options.margin_left - задает внутренний внешний отступ margin-left в пикселях, от 10 до 150 с шагом 10, по-умолчанию 0
+
+  options.padding - задает внутренний отступ padding в пикселях, от 5 до 45 с шагом 5, по-умолчанию 0
+  options.padding_top - задает внутренний отступ padding-top в пикселях, от 10 до 150 с шагом 10, по-умолчанию 0
+  options.padding_right - задает внутренний отступ padding-right в пикселях, от 10 до 150 с шагом 10, по-умолчанию 0
+  options.padding_bottom - задает внутренний отступ padding-bottom в пикселях, от 1 до 15 с шагом 1 и от 10 до 150 с шагом 10, по-умолчанию 0
+  options.padding_left - задает внутренний отступ padding-left в пикселях, от 10 до 150 с шагом 10, по-умолчанию 0
+
+
+  options.width - задает максимальную ширину блока max-width в %, имеет одно значение по умолчанию 50%
+
+  options.width_max - задает максимальную ширину блока max-width в %, возможные значения '22', '26', '44', '55', '64'
+
+  options.height - задает высоту блока height в px, возможные значения 18 
+  options.height_max - задает максимальную высоту блока max-height в %, возможные значения '9_3', '14_9', '20_2', '21_2', '25_2' 
+
+  options.justify - задает распределение пространства между и вокруг элементов контента вдоль 
+  главной оси flex контейнера, или вдоль строчной оси grid контейнера justify-content, возможные значения 'between',
+  'around', 'evenly', 'stretch'
+
+  options.weight - задает насыщенность начертания, возможные значения 400
+
+mixin layout__container(options)
+  if !options
+    - options = {}
+
+  -
+    var classes = ''
+    classes += options.display ? ' layout__container_' + options.display : ''
+    classes += options.basis ? ' layout__container_basis-' + options.basis : ''
+    classes += options.grow ? ' layout__container_grow-' + options.grow : ''
+    classes += options.margin ? ' layout__container_margin_' + options.margin : ''
+    classes += options.margin_top ? ' layout__container_margin_top_' + options.margin_top : ''
+    classes += options.margin_right ? ' layout__container_margin_right_' + options.margin_right : ''
+    classes += options.margin_bottom ? ' layout__container_margin_bottom_' + options.margin_bottom : ''
+    classes += options.margin_left ? ' layout__container_margin_left_' + options.margin_left : ''
+    classes += options.padding ? ' layout__container_padding_' + options.padding : ''
+    classes += options.padding_top ? ' layout__container_padding_top_' + options.padding_top : ''
+    classes += options.padding_right ? ' layout__container_padding_right_' + options.padding_right : ''
+    classes += options.padding_bottom ? ' layout__container_padding_bottom_' + options.padding_bottom : ''
+    classes += options.padding_left ? ' layout__container_padding_left_' + options.padding_left : ''
+    classes += options.shrink ? ' layout__container_shrink-' + options.shrink : ''
+    classes += options.wrap ? ' layout__container_' + options.wrap : ''
+    classes += options.direction ? ' layout__container_' + options.direction : ''
+    classes += options.align ? ' layout__container_' + options.align : ''
+    classes += options.text_align ? ' layout__container_text_align_' + options.text_align : ''
+    classes += options.width ? ' layout__container_width_' + options.width : ''
+    classes += options.width_max ? ' layout__container_width_max_' + options.width_max : ''
+    classes += options.height ? ' layout__container_height_' + options.height : ''
+    classes += options.height_max ? ' layout__container_height_max_' + options.height_max : ''
+    classes += options.mix ? ' ' + options.mix : ''
+    classes += options.justify ? ' layout__container_justify_' + options.justify : ''
+    classes += options.border ? ' layout__container_border_' + options.border : ''
+    classes += options.border_radius ? ' layout__container_border_radius_' + options.border_radius : ''
+    classes += options.hover ? ' layout__container_hover_' + options.hover : ''
+    classes += options.weight ? ' layout__container_weight_' + options.weight : ''
+    classes += options.text_transform ? ' layout__container_text_transform' : ''
+    classes += options.color ? ' layout__container_color_' + options.color : ''
+
+    classes += options.position ? ' layout__container_position layout__container_position_' + options.position : ''
+
+  .layout__container(class= classes)
+    block

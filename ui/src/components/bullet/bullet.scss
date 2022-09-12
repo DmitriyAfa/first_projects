@@ -1,0 +1,45 @@
+@import "../../theme/variables.scss";
+$dropDownHeight: 3.15rem;
+
+.bullet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 18rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+  }
+
+  &__lists {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list {
+    display: flex;
+    min-width: 18.5rem;
+    margin: 0 0 0.7rem 0;
+  }
+
+  &__wrapper {
+    height: 1.5rem;
+    padding-top: 0.45rem;
+  }
+
+  &__ellipse {
+    border-radius: 22px;
+    min-width: 0.75rem;
+    height: 0.7rem;
+
+    background: rgba(31, 32, 65, 0.25);
+  }
+
+  &__content {
+    color: $color-dark-75;
+    margin: 0 0px 0px 0.73rem;
+  }
+}

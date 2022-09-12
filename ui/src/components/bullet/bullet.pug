@@ -1,0 +1,33 @@
+//-
+  options.items - массив элементов выпадающего списка
+  options.items[0].name - название элемента
+  options.items[0].value - value элемента
+  options.name - form element name
+  options.tabindex - input tabindex
+  options.required - input required
+
+mixin bullet(options)
+  if !options
+    - options = {}
+
+  - if (!options.data)
+    .bullet
+      .bullet__lists
+        .bullet__list
+          .bullet__wrapper
+            .bullet__ellipse
+          p.bullet__content example
+
+  - if (options.data)
+    .bullet
+      .bullet__header
+        h3= options.data.name
+        h3= options.data.example
+      .bullet__lists
+        if options.items
+          each item in options.items
+            .bullet__list
+              .bullet__wrapper
+                .bullet__ellipse
+              p.bullet__content= item.name
+

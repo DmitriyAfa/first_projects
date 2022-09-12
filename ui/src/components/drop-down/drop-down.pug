@@ -1,0 +1,64 @@
+include ../button/button
+//-
+  options.items - массив элементов выпадающего списка
+  options.items[0].name - название элемента
+  options.items[0].value - value элемента
+  options.name - form element name
+  options.tabindex - input tabindex
+  options.required - input required
+
+mixin drop-down(options)
+  if !options
+    - options = {}
+
+  -
+    let classes = ''
+    classes += options.size ? ' drop-down__label_size_' + options.size : ''
+
+  - if (!options.data)
+    .drop-down
+      label.drop-down__label.js-drop-down__label
+        select.drop-down__select-box.js-drop-down__select-box(
+          class= classes
+          name = options.name
+          tabindex = options.tabindex
+          required = options.required
+        )
+          if options.items
+            each item in options.items
+              option.drop-down__item(
+                value = item.name
+              ) #{item.value || item.name}
+
+  - if (options.data)
+    .drop-down.js-drop-down
+      .drop-down__header
+        h3= options.data.name
+        h3= options.data.example
+      .drop-down__label.js-drop-down__label(
+        class= classes
+        data-name = options.data.data
+        )
+        span.drop-down__content.js-drop-down__content= options.content
+        if options.items
+          each item in options.items
+            .drop-down__item.js-drop-down__item(
+              value = item.name
+            ) 
+              h3= item.name
+              .drop-down__counter.js-drop-down__counter(
+                data-counter = item.data__counter
+              )
+                button.drop-down__math.drop-down__math-minus.js-drop-down__math-minus &#45;
+                h3.drop-down__math-counter.js-drop-down__math-counter= item.counter
+                button.drop-down__math.drop-down__math-plus.drop-down__math_actived.js-drop-down__math-plus &#43;
+          - if (options.data.data === 'guests')
+            .drop-down__footer.js-drop-down__footer
+              +button({
+                line_height: '3_6',
+                content: 'очистить'
+              })
+              +button({
+                line_height: '3_6',
+                content: 'применить'
+              })

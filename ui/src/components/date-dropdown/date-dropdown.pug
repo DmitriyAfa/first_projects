@@ -1,0 +1,49 @@
+//- include ../toggle/toggle
+//- include ../tick-box/tick-box
+
+//-
+  options.name - form element name
+  options.type - input type
+  options.placeholder - input placeholder
+  options.pattern - input pattern
+  options.tabindex - input tabindex
+  options.required - input required
+  options.label - подпись к checkbox и radio
+
+mixin date-dropdown(options)
+  if !options
+    - options = {}
+
+  -
+    let classes = ''
+    classes += options.size ? ' date-dropdown__element_size_' + options.size : ''
+    classes += options.mix ? ' ' + options.mix : ''
+
+
+  - if (!options.dateDropdown)
+    .date-dropdown
+      input.input__element#1(
+        class= classes
+        type = "text"
+        name = options.name
+        placeholder = options.placeholder
+        pattern = options.pattern
+        tabindex = options.tabindex
+        required = options.required
+      )
+
+  - if (options.dateDropdown)
+    .date-dropdown
+      .date-dropdown__header
+        h3= options.dateDropdown.name
+        h3= options.dateDropdown.example
+      input.date-dropdown__element#1(
+        class= classes
+        type = "text"
+        name = options.name
+        placeholder = options.placeholder
+        pattern = options.pattern
+        tabindex = options.tabindex
+        required = options.required
+        )
+

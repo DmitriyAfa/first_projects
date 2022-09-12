@@ -1,0 +1,61 @@
+@import "../../theme/variables.scss";
+
+.range-slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    h3:last-child {
+      font-weight: 400;
+      color: $color-dark-50;
+    }
+
+    margin-bottom: 1.3rem;
+  }
+
+  &__element {
+    width: 266px;
+  }
+
+  .noUi-horizontal {
+    height: 6px;
+  }
+
+  .noUi-target {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 3px;
+  }
+
+  .noUi-handle {
+    width: 12px;
+    height: 12px;
+    box-shadow: none;
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .noUi-horizontal .noUi-handle {
+    width: 15px;
+    height: 15px;
+    right: -10px;
+    top: -5px;
+  }
+
+  .noUi-connect {
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  }
+}

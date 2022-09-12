@@ -1,0 +1,787 @@
+// === UNITED ===
+// создаю отдельный mixin для hr линии т.к она используется несколько раз на сайте
+@mixin hr-line {
+    color: #414141;
+    width: 4%;
+
+     margin: 15px 0 5px 0;
+}
+
+@mixin title {
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+}
+
+@mixin subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+}
+
+@mixin content {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+@mixin top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 60px 0 50px 0;
+}
+
+@mixin photo {
+    margin: 5px 5px 10px 5px;
+    min-width: 32%;
+    height: 300px;
+}
+
+
+// === / UNITED ===
+
+
+
+body {
+padding: 0;
+margin: 0;
+font-family: sans-serif;
+
+color: #414141;
+}
+
+.section-inner {
+    // подшаманить height или верстка под разные экраны ? 
+    // height:  760px;
+    width: 1180px;
+    margin: 50px auto;
+}
+
+
+
+
+// === HEADER ===
+.section-header{
+    height:  760px;
+    color: white;
+    background: url(../images/header.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+
+    //1.!?Как создать затемнение отдельно от картинки ? 2. !!!-> C помощью псевдоэлемента before 3. ->!? псевдоэлемент перекрыл остальной контент, как сделать так, чтобы псевдоэлемент покрывал ТОЛЬКО background (фон) ?  4. !!!-> с помощью z-index определить порядок вложения и назначить вложенному элементу в .section-header (который является) ->> .section-inner z-index: 10; , а псевдоэлементу ::before: 5; 
+    .section-inner{
+        z-index: 10;
+        position: relative;
+
+        margin: 0 auto;
+    }
+
+    &::before {
+        z-index: 5;
+
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(31, 15, 17, 0.5);
+    }
+
+    &-top{
+
+        display: flex;
+        justify-content: space-between;
+        // padding-top: 45px;
+        &_logo{
+            padding-left: 61px;
+            padding-top: 52px;
+
+            font-size: 26px;
+            font-weight: bold;
+        }
+        &_nav{
+            margin-right: 74px;
+            ul{
+                display: flex;
+                padding-top: 45px;
+            }
+            li{
+                padding-left: 15px;
+                margin-left: 20px;
+                list-style-type: none;
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &-center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // margin: 220px 75px 0 0;
+        margin: 220px auto;
+        &_title{
+            font-size: 40px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            // margin-left: 54px;
+        }
+        &_subtitle{
+            letter-spacing: 1px;
+            font-size: 18px;
+            margin: 16px 0 0 0;
+        }
+        button{
+            background: rgba(255, 255, 255, 0);
+            border: 3px solid white;
+            padding: 10px 35px 10px 35px;
+            margin: 49px 0 0 0;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+// === / HEADER ===
+
+
+// === SERVICES ===
+.section-services{
+    position: relative;
+    margin:0 auto;
+    width: 80%;
+    color: #414141;
+
+    margin-bottom: 60px;
+    &-top{
+        @include top;
+        
+        &_title{
+            font-size: 18px;
+            font-weight: normal;
+        }
+        hr{
+            @include hr-line;
+        }
+        &_subtitle{
+            @include subtitle;
+        }
+    }
+
+    &-items{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+
+
+        &_item{
+            width: 60%;
+            &-icon{
+                text-align: center;
+            }
+            &-title{
+            @include title;
+
+            margin: 40px 0 40px 0;
+            }
+            &-content{
+               @include content;
+
+               text-align: center;
+            }
+        }
+    }
+}
+
+
+// === / SERVICES ===
+
+// === ABOUT ===
+
+.section-about{
+    margin:0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+
+    .section-inner-1 {
+        position: relative;
+        margin: 0 auto;
+        width: 1180px;
+        z-index: 10;
+
+    }
+
+    &::before {
+        z-index: 5;
+
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(184, 67, 80, 0.1);
+    }
+
+
+    .section-inner{
+        width: 80%;
+        position: relative;
+    }
+
+
+    &-top{
+        @include top;
+        &_title{
+            @include title;
+            margin: 50px 0 0 0;
+        }
+        hr{
+            @include hr-line;
+        }
+        &_subtitle{
+            @include subtitle;
+            margin-top: 5px;
+        }
+    }
+
+    &-content{
+        display: flex;
+        flex-direction: row;
+        
+
+        @include content;
+
+        text-align: justify;
+        &_text{
+            margin: 0 5px 0 5px;
+        }
+    }
+
+    &-slider{
+
+        span{
+            position: absolute;
+            top: 30%;
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            z-index: 1;
+        }
+        span:nth-of-type(2){
+            left: 97.3%;
+            // text-align: right;
+        }
+
+    
+        &_btnleft{
+            background-color: rgba(128, 128, 128, 0.527);
+            height: 30px;
+            width: 30px;
+            left: .2%;
+        }
+        &_btnleft:hover{
+            background-color: #c1301d9c;
+        }
+
+        &_btnright{
+            background-color: rgba(128, 128, 128, 0.527);
+            height: 30px;
+            width: 30px;
+            left: 97.3%;
+        }
+        &_btnright:hover{
+            background-color: #c1301d9c;
+        }
+
+        &_window{
+            display: flex;
+            justify-content: flex-start;
+            height: 400px;
+            overflow: hidden;
+            transition: .2s; //плавность перехода
+            position: relative;
+            text-align: center;
+            
+            &-item{
+                position: relative;
+                min-width: 285px;
+                height: 285px;
+                margin: 0 10px 0 2px;
+                left: 0;
+
+                transition: all 1s;
+
+                .hover{
+                    img{
+                        width: 16px;
+                        height: 16px;
+
+                    }
+
+                    &:hover{
+                        display: block;
+                        background-color: rgba(128, 128, 128, 0.5);
+                    }
+                    height: 285px;
+
+                    span{
+                        display:none;
+                        margin: 100px 0px 0 50px;
+                        left: 50px;
+                        top: 130px;
+
+        
+                        .a1{
+                            font-size: 22px;
+                            &:hover {
+                            background: red;
+                            
+                        }}
+
+                        .a2 {
+                            font-size: 22px;
+                            &:hover {
+                                background: red;
+                        }}
+
+                        .a3 {
+                            font-size: 22px;
+                            &:hover {
+                                background: red;
+                        }}
+
+                        .a4 {
+                            font-size: 22px;
+                            &:hover {
+                                background: red;
+                        }}
+                    }
+                    &:hover > span {
+                        display: block;
+
+                    }
+                }
+
+                .name{
+                    margin-top: 15px;
+
+                    font-size: 18px;
+                }
+                .position{
+                    font-size: 14px; 
+
+                    margin-top: -10px;
+                }
+            }
+
+            .f1{background: url(../images/about/1.jpg);}
+            .f2{background: url(../images/about/2.jpg);}
+            .f3{background: url(../images/about/3.jpg);}
+            .f4{background: url(../images/about/4.jpg);}
+            .f5{background: url(../images/about/5.jpg) 25% 10%;}
+            .f6{background: url(../images/about/6.jpg);}
+            .f7{background: url(../images/about/7.jpg);}
+            .f8{background: url(../images/about/8.jpg);}
+
+
+        }
+    }
+}
+
+// === / ABOUT ===
+
+// ===  THE WORKS ===
+
+.section-works{
+
+    &-top{
+        @include top;
+        hr {
+            @include hr-line;
+        }
+        &_nav{
+            ul{
+                display: flex;
+                li{
+                    margin-right: 25px;
+                    list-style-type: none;
+                    a{
+                        text-decoration: none;
+                        color: #414141;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &-gallery{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        .photo-effect{
+            display: none;
+
+            text-align: center;
+            padding: 70px 0 106px 0;
+
+            background-color: rgba(185, 15, 35, 0.425);
+
+            h4, h6{
+                color: white;
+            }
+
+            button{
+                border: none;
+
+                color: rgba(185, 15, 35, 1);
+                background-color: #ffffff91;
+                width: 60px;
+                height: 23px;
+                a{
+                    color: rgba(185, 15, 35, 1);
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .photo{
+            @include photo;
+        }
+
+        &_photo{
+            position: relative;
+            &:hover{
+                background: #80808080;
+            }
+            &-1{
+                background-image: url(../images/works/women.jpg);
+            }
+            &-1:hover >  &-effect-1 {
+                display: block;
+            }
+
+            &-2{
+                background-image: url(../images/works/6.jpg);
+            }
+            &-2:hover >  &-effect-2 {
+                display: block;
+            }
+
+            &-3{
+                background-image: url(../images/works/man2.jpg);
+            }
+            &-3:hover >  &-effect-3 {
+                display: block;
+            }
+
+            &-4{
+                background-image: url(../images/works/4.jpg);
+            }
+            &-4:hover >  &-effect-4 {
+                display: block;
+            }
+
+            &-5{
+                background-image: url(../images/works/5.jpg);
+            }
+            &-5:hover >  &-effect-5 {
+                display: block;
+            }
+
+            &-6{
+                background-image: url(../images/works/2.jpg);
+            }
+            &-6:hover >  &-effect-6 {
+                display: block;
+            }
+
+            &-7{
+                background-image: url(../images/works/7.jpg);
+            }
+            &-7:hover >  &-effect-7 {
+                display: block;
+            }
+
+            &-8{
+                background-image: url(../images/works/8.jpg);
+            }
+            &-8:hover >  &-effect-8 {
+                display: block;
+            }
+
+            &-9{
+                background-image: url(../images/works/9.jpg);
+            }
+            &-9:hover >  &-effect-9 {
+                display: block;
+            }
+        }
+    }
+}
+
+// === / THE WORKS ===
+
+// === PROMO ===
+.section-promo{
+    width: 100%;
+    height: 360px;
+    position: relative;
+    background: url(../images/promo/teamwork-3213924_1920.jpg) no-repeat 50% 50%;
+    background-size: cover;
+
+    .section-inner{
+        z-index: 10;
+        position: relative;
+    }
+
+    &::before {
+        z-index: 5;
+
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 0, 30, 0.5);
+    }
+
+    &-content{
+        margin: 0 auto;
+         width: 1180px;
+        position: relative;
+        padding-top: 36px;
+
+        text-align: center;
+        &_title{
+            @include title;
+            margin: 50px 0 0 0;
+            color: white;
+        }
+        &_button{
+            button{
+                background: rgba(255, 255, 255, 0);
+                border: 3px solid white;
+                padding: 10px 35px 10px 35px;
+                margin: 49px 0 0 0;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// === / PROMO ===
+
+// ===  POSTS ===
+
+.section-posts{
+    &-top{
+        @include top;
+        &_title{
+            @include title;
+        }
+        hr{
+            @include hr-line;
+        }
+        &_subtitle{
+            @include subtitle;
+            margin-top: 5px;
+        }
+    }
+
+    &-postswrap{
+
+        &-post{
+            display: flex;
+            flex-direction: row;
+            &_img{
+            margin: 0 20px 30px 0;
+            }
+            &_info{
+                &-top{
+                    display: flex;
+                    flex-direction: row;
+                    text-align: center;
+
+                    &_data{
+                        border: 3px solid #414141;
+                        width: 50px;
+                        height: 50px;
+                        p{
+                        margin: 0;
+                        padding: 4px;
+                        }
+                        .number{
+                            font-weight: 500;
+                            font-size: 16px;
+                        }
+                        .month{
+                            font-size: 12px;
+                        }
+                    }
+
+                    &-wrap{
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: 15px;
+                    &_title{
+                        font-weight: 600;
+                    }
+                    &_subtitle{
+                        text-align: left;
+                        font-family: 'Times New Roman', Times, serif; /* Шрифт с засечками */
+                        font-style: italic;
+                    }
+                    }
+                }
+                &-text{
+                    text-align: justify;
+                    margin-top: 15px;
+                    line-height: 1.5;
+                }
+                &-more{
+                    margin-top: 55px;
+                    a{
+                        text-decoration: none;
+                        color: #414141;
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    hr{
+        margin: 15px 0 50px 0;
+        padding: 0;
+	height: 0;
+	border: none;
+	border-top: 1px solid #4141411f;
+    }
+}
+
+// === / POSTS ===
+
+// ===  ADDRESS ===
+
+.section-address{
+    &-top{
+        @include top;
+        &_title{
+            @include title;
+        }
+        hr{@include hr-line;}
+        &_subtitle{
+            @include subtitle;
+            margin-top: 5px;
+        }
+    }
+
+    &-wrapper{
+        display: flex;
+        flex-direction: row;
+        &-connect{
+            &_address{
+                margin-right: 223px;
+                margin-bottom: 25px;
+                .top{
+                
+                    .icon{
+                        img{
+                        width: 16px;
+                        height: 16px;
+                        }
+                    }
+                }
+                .center{
+                    font-size: 12px;
+                    margin-top: 10px;
+                }
+                .bottom{
+                    font-size: 12px;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        &-feedback{
+            width: 63%;
+            &_inputs{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 33% 33% 66%;
+                grid-column-gap: 22px;
+                grid-row-gap: 22px;
+                .message{
+                    grid-column: span 2;
+                }
+            }
+
+            &_bottom{
+                margin-top: 96px;
+                .button{
+            background-color: rgba(0, 255, 255, 0);
+            padding: 10px 35px 10px 35px;
+            cursor: pointer;
+                    color: #414141;
+                }
+                .span{
+                    margin: 0 0 0 90px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+// === / ADDRESS ===
+
+// ===  FOOTER ===
+
+.section-footer{
+    text-align: center;
+    background-color: #C1301D;
+    display: flex;
+    align-items: center;
+    height: 272px;
+
+    &-wrapper{
+        text-align: center;
+        color: white;
+
+        &_title{
+            img{
+                width: 24px;
+                height: 24px;
+                margin: 0 3px;
+            }
+        }
+
+        hr{
+            width: 4%;
+            border: none;
+	        border-top: 1px solid #fff;
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+        &_subtitle{
+            font-size: 10px;
+        }
+    }
+
+}
+
+// === / FOOTER ===

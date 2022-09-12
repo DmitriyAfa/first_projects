@@ -1,0 +1,148 @@
+@import "../../theme/variables.scss";
+$dropDownHeight: 3.15rem;
+
+.drop-down {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  user-select: none;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    h3 {
+      letter-spacing: 0.05rem;
+    }
+
+    h3:last-child {
+      font-weight: 400;
+      color: $color-dark-50;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    width: 22.85rem;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+
+    font-family: Montserrat, serif, "sans-serif";
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 24px;
+    color: $color-dark-75;
+
+    &_size {
+      &_medium {
+        width: 19rem;
+      }
+    }
+
+    &:focus {
+      border: 1px solid rgba(31, 32, 65, 0.5);
+    }
+    &:hover {
+      border: 1px solid rgba(31, 32, 65, 0.5);
+    }
+  }
+
+  &__content {
+    height: 2.85rem;
+    padding-left: 1rem;
+    padding-top: 8px;
+    background: url(./img/down.svg) no-repeat right;
+    background-position-x: 96.3%;
+    background-position-y: 52%;
+    margin-bottom: 2px;
+    cursor: pointer;
+  }
+
+  &__item {
+    display: none;
+  }
+
+  &__footer {
+    display: none;
+  }
+}
+
+.drop-down__label.drop-down__label_expanded {
+  border-radius: 4px;
+  &:focus .drop-down__content {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.5);
+  }
+  &:hover .drop-down__content {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.5);
+  }
+
+  .drop-down__content {
+    height: 3rem;
+    padding-left: 1rem;
+    padding-top: 8px;
+    background: url(./img/down.svg) no-repeat right;
+    background-position-x: 96.3%;
+    background-position-y: 48%;
+
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+    margin-bottom: 2px;
+  }
+
+  .drop-down__item {
+    padding-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.65rem;
+
+    &:last-child {
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  .drop-down__counter {
+    display: flex;
+    margin-right: 6px;
+    padding-top: 3px;
+
+    .drop-down__math {
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      background: none;
+      cursor: pointer;
+
+      font-size: 16px;
+      line-height: 22px;
+
+      border: $border-05;
+      color: $color-dark-05;
+    }
+
+    .drop-down__math_actived {
+      border: $border-25;
+      color: $color-dark-25;
+    }
+
+    .drop-down__math-counter {
+      display: block;
+      line-height: 1.9rem;
+      width: 2.3rem;
+      text-align: center;
+    }
+  }
+
+  .drop-down__footer {
+    display: flex;
+    padding-left: 0.95rem;
+
+    div:first-child {
+      visibility: hidden;
+      margin-right: 10.35rem;
+    }
+  }
+}

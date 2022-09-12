@@ -1,0 +1,31 @@
+mixin rate-button(options)
+  if !options
+    - options = {}
+
+  - if (!options.data)
+    .rate-button
+      input(type= 'checkbox')
+      input(type= 'checkbox')
+      input(type= 'checkbox')
+      input(type= 'checkbox')
+      input(type= 'checkbox')
+
+  - if (options.data)
+    .rate
+      .rate__header
+        h3= options.data.name
+        h3= options.data.example
+      .rate__elements
+        .rate-button
+          input(type= 'checkbox')
+          input(type= 'checkbox')
+          input(type= 'checkbox')
+          input(type= 'checkbox')
+          input(type= 'checkbox')
+        -if (options.rate)
+          .rate-button
+            input(type= 'checkbox')
+            input(type= 'checkbox')
+            input(type= 'checkbox')
+            input(type= 'checkbox')
+            input(type= 'checkbox')

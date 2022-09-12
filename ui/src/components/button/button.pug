@@ -1,0 +1,37 @@
+//- options.expand - задает (data-attr) data-expand, возможные значение 'up', по умолчанию 'down'.
+
+mixin button(options)
+  if !options
+    - options = {}
+
+  -
+    let classes = ''
+    classes += options.width ? ' button__element_width_' + options.width : ''
+    classes += options.line_height ? ' button__element_line_height_' + options.line_height : ''
+    classes += options.color ? ' button__element_color_' + options.color : ''
+    classes += options.theme ? ' button__element_theme_' + options.theme : ''
+    classes += options.border ? ' button__element_border_' + options.border : ''
+    classes += options.opacity ? ' button__element_opacity_' + options.opacity : ''
+    classes += options.arrow ? ' button__element_' + options.arrow : ''
+
+  - if (!options.data)
+    .button
+      button.button__element(class= classes)
+        - if (options.content)
+          h3= options.content
+        - if (!options.content)
+          h3 click me
+
+
+
+  - if (options.data)
+    .button
+      .button__header
+        h3= options.data.name
+        h3= options.data.example
+      button.button__element(class= classes)
+        - if (options.content)
+          h3= options.content
+        - if (!options.content)
+          h3 click me
+

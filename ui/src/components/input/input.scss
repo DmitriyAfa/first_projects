@@ -1,0 +1,216 @@
+@import "../../theme/variables.scss";
+
+.input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  width: 22.85rem;
+
+  &[data-name="subscription-text-field"] {
+    width: 19rem;
+
+    .input__elements {
+      display: flex;
+      border-radius: 4px;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+
+      &:focus {
+        color: $color-dark-75;
+        border: 1px solid rgba(31, 32, 65, 0.5);
+      }
+      &:hover {
+        color: $color-dark-75;
+        border: 1px solid rgba(31, 32, 65, 0.5);
+      }
+    }
+
+    .input__element {
+      border: 0;
+      height: 3rem;
+    }
+
+    .input__btn {
+      width: 4rem;
+      height: 3rem;
+      border: 0;
+      background: url(./img/arrow_forward.svg) no-repeat;
+      cursor: pointer;
+      background-position-x: 1.65rem;
+      background-position-y: center;
+    }
+  }
+
+  &_size_medium {
+    width: 10.7rem;
+
+    &[type="email"] {
+      width: 19rem;
+      background: url(./img/arrow_forward.svg) no-repeat;
+      background-position-x: 16.6rem;
+      background-position-y: 0.66rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    h3:last-child {
+      font-weight: 400;
+      color: $color-dark-50;
+    }
+  }
+
+  &__element {
+    // &_size_medium {
+    //   width: 10.7rem;
+
+    //   &[type="email"] {
+    //     width: 19rem;
+    //     background: url(./img/arrow_forward.svg) no-repeat;
+    //     background-position-x: 16.6rem;
+    //     background-position-y: 0.66rem;
+    //   }
+    // }
+
+    flex-grow: 1;
+    outline: none;
+    // width: 22.85rem;
+    height: 3.15rem;
+    color: $color-dark-25;
+    padding: 0.43rem 1rem;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+
+    font-family: Montserrat, serif, "sans-serif";
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 24px;
+
+    letter-spacing: -0.012rem;
+
+    &::placeholder {
+      font-family: Montserrat, serif, "sans-serif";
+      font-weight: 400;
+      font-size: 14px;
+      font-style: normal;
+      line-height: 24px;
+
+      color: $color-dark-25;
+    }
+
+    &:focus {
+      color: $color-dark-75;
+      border: 1px solid rgba(31, 32, 65, 0.5);
+    }
+    &:hover {
+      color: $color-dark-75;
+      border: 1px solid rgba(31, 32, 65, 0.5);
+    }
+
+    &[type="checkbox"],
+    &[type="radio"] {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      visibility: hidden;
+      cursor: pointer;
+
+      border: 1px solid $color-dark-25;
+      border-radius: 4px;
+
+      padding-left: 5px;
+      padding-top: 5px;
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    &[type="date"] {
+      &::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+
+      text-transform: uppercase;
+      letter-spacing: -0.05rem;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label-text {
+    padding: 0.43rem 1rem;
+    color: #888;
+    font-size: 1.2rem;
+  }
+
+  &__toggle,
+  &__tick-box {
+    flex: 0 0 auto;
+  }
+
+  &__validation {
+    position: relative;
+    display: flex;
+    min-width: 6rem;
+    margin-left: 1rem;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      position: absolute;
+      top: calc(50% - 0.25rem);
+      left: -0.25rem;
+      display: block;
+      width: 0.5rem;
+      height: 0.5rem;
+      content: "";
+      transform: rotate(45deg);
+      border-bottom-left-radius: 1px;
+      background-color: inherit;
+    }
+  }
+
+  &__validation-ok,
+  &__validation-error {
+    text-transform: uppercase;
+    color: white;
+    font-family: LatoBlack, sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  &__element {
+    &:valid + .input__validation {
+      background-color: $color-first;
+
+      & .input__validation-ok {
+        display: inline;
+      }
+
+      & .input__validation-error {
+        display: none;
+      }
+    }
+
+    &:invalid + .input__validation {
+      background-color: $color-second;
+
+      & .input__validation-ok {
+        display: none;
+      }
+
+      & .input__validation-error {
+        display: inline;
+      }
+    }
+  }
+}

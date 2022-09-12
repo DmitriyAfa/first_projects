@@ -1,0 +1,130 @@
+@import "../../theme/variables.scss";
+
+.checkbox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  user-select: none;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    h3:last-child {
+      font-weight: 400;
+      color: $color-dark-50;
+    }
+
+    &-h3 {
+      margin-right: 3rem;
+    }
+
+    margin-bottom: 0.85rem;
+
+    &-button {
+      width: 1.5rem;
+      border: 0;
+      cursor: pointer;
+      background: url(./img/down.svg);
+
+      &_expanded {
+        background: url(./img/expand_up.svg);
+      }
+    }
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+
+    &_expanded {
+      margin-top: 0.1rem;
+    }
+
+    &_none {
+      display: none;
+    }
+
+    &-checkbox {
+      display: flex;
+      margin-bottom: 0.75rem;
+
+      &[data-element="rich"] {
+        margin-bottom: 0.6rem;
+
+        &:nth-child(2) {
+          .checkbox__element-content {
+            width: 16rem;
+          }
+        }
+      }
+    }
+
+    &-box {
+      display: flex;
+
+      min-width: 20px;
+      height: 20px;
+
+      cursor: pointer;
+
+      border: 1px solid $color-dark-25;
+      border-radius: 4px;
+
+      padding-left: 5px;
+      padding-top: 5px;
+
+      &_checked {
+        border: 1px solid #bc9cff;
+      }
+
+      .checkbox__element-tick {
+        display: none;
+        width: 8px;
+        height: 6px;
+        border-top: 2px solid $color-primary;
+        border-right: 2px solid $color-primary;
+        border-left: white;
+        border-bottom: white;
+        transform: rotate(135deg);
+
+        &_checked {
+          display: block;
+          position: relative;
+          z-index: -1;
+        }
+      }
+    }
+
+    &-content {
+      width: 14rem;
+      color: $color-dark-50;
+      margin-left: 0.7rem;
+      line-height: 18px;
+    }
+
+    &-contents {
+      min-width: 16rem;
+      color: $color-dark-50;
+      margin-left: 0.7rem;
+      line-height: 18px;
+
+      h3.checkbox__element-contents-header {
+        text-transform: none;
+        line-height: 1.5rem;
+        font-size: 1rem;
+        letter-spacing: 0;
+      }
+
+      .checkbox__element-content {
+        display: block;
+        margin: 0;
+        line-height: 1rem;
+        font-size: 0.85rem;
+        letter-spacing: 0.004rem;
+        padding: 4px 0 0 0;
+      }
+    }
+  }
+}

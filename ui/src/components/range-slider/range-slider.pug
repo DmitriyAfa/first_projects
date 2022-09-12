@@ -1,0 +1,21 @@
+//- options.expand - задает (data-attr) data-expand, возможные значение 'up', по умолчанию 'down'.
+
+mixin range-slider(options)
+  if !options
+    - options = {}
+
+  - if (!options.data)
+    .range-slider.js-range-slider
+      .range-slider__header.js-range-slider__header
+        h3
+        .range-slider__content.js-range-slider__content
+      .range-slider__element.js-range-slider__element
+
+
+  - if (options.data)
+    .range-slider.js-range-slider
+      .range-slider__header.js-range-slider__header
+        h3= options.data.name
+        .range-slider__content.js-range-slider__content
+      .range-slider__element.js-range-slider__element
+

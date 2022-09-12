@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 0;
+
+  background: rgb(36, 20, 20);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.slide{
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  /* flex: 1; пропорциональное растягивание элементов  */
+  flex: 1;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  /* Анимируем все основные свойства у всех объектов (слайдов)  при каком либо изменении*/
+  transition: all 500ms ease-in-out;
+}
+
+.slide h3 {
+  /* для абсолютного позиционирования h3 относительно .slide задаем .slide position: relative; */
+  position: absolute;
+
+  font-size: 24px;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+
+  /* скрываем h3 посредством прозрачности */
+  opacity: 0;
+}
+
+.slide.active{
+  /* данный слайд будет в 10 раз больше остальных со значением flex: 1; */
+  flex: 10;
+}
+
+.slide.active h3{
+  /* возвращаем видимость активному элементу */
+  opacity: 1;
+  /* делаем заготовку для действия анимации посредством transition.  0.4s - delay - устанавливает время ожидания перед запуском анимации. В данном случае перед тем как проявить свойство opacity: 1; пройдет 0.4s */
+  transition: opacity 0.3s ease-in 0.4s;
+}

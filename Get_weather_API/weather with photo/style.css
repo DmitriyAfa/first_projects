@@ -1,0 +1,71 @@
+body{
+    height: 100vh;
+    /* background-color: rgb(43, 29, 29); */
+    margin: 0 auto;
+    background: linear-gradient(to bottom, rgb(43, 29, 29), #111119);
+    font-family: 'Fenix', serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+.wrapper{
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.slide{
+    position: relative;
+    flex: 1;
+    height: 80vh;
+
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+    border-radius: 25px;
+    margin: 7px;
+
+    transition: all 1s ease-out;
+}
+
+.slide h3{
+    position: absolute;
+    bottom: 0;
+/* text-align: center; */
+    color: white;
+
+    opacity: 0;
+}
+
+input{
+    display: none;
+}
+
+.price, .disclaimer, .features, .city-name {
+    opacity: 0;
+}
+.features{margin: 0 35px 0 0;}
+
+.active{
+    flex: 10;
+}
+
+.active h3{
+opacity: 1;
+
+transition: opacity 1s ease-out;
+}
+
+.active-price, .active-disclaimer, .active-features, .active-city-name h3 {
+    color: white;
+    opacity: 1;
+    font-size: 18px;
+    text-align: center;
+    transition: all 1s ease-out;
+}

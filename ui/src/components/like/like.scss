@@ -1,0 +1,75 @@
+@import "../../theme/variables.scss";
+
+.like {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    h3:last-child {
+      font-weight: 400;
+      color: $color-dark-50;
+    }
+
+    margin-bottom: 0.8rem;
+  }
+
+  &__elements {
+    display: flex;
+  }
+
+  &__element {
+    color: $color-dark-25;
+
+    display: flex;
+
+    width: 40px;
+    height: 20px;
+
+    cursor: pointer;
+
+    border: 1px solid $color-dark-25;
+    border-radius: 10px;
+
+    padding-left: 3px;
+    padding-top: 3px;
+
+    &::before {
+      content: "";
+      width: 1rem;
+      background: url(./img/heart_border.svg) no-repeat;
+      background-position-x: 0.1rem;
+      background-position-y: 0.15rem;
+    }
+
+    &_actived {
+      border: 1px solid #bc9cff;
+      &::before {
+        content: "";
+        width: 1rem;
+        background: url(./img/heart.svg) no-repeat;
+        background-position-x: 0.1rem;
+        background-position-y: 0.15rem;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-left: 10px;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  &__content {
+    width: 0.8rem;
+    text-align: right;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+    user-select: none;
+  }
+}

@@ -1,0 +1,87 @@
+extends ../base/base
+
+include ../../components/rectangle/rectangle
+
+block title
+  | Colors and type
+
+block header
+  +layout__container({padding: '2_1'})
+    +header()
+
+block main
+  +layout__container({direction: 'column', padding_top: '2_1', padding_left: '10_7', width: 50})
+    +layout__container({margin_bottom: '1_45'})
+      +rectangle({theme: 'dark-100'})
+      +layout__container({direction: 'column', padding_left: '2_9', justify: 'evenly'})
+        +layout__container({padding_top: '0_7'})
+          h2 Dark Shade 100%
+        +layout__container({padding_bottom: '0_3', weight: 400})
+          h2 #1F2041
+    +layout__container({margin_bottom: '1_45'})
+      +rectangle({theme: 'dark-75'})
+      +layout__container({direction: 'column', padding_left: '2_9', justify: 'evenly'})
+        +layout__container({padding_top: '0_7'})
+          h2 Dark Shade 75%
+        +layout__container({padding_bottom: '0_3', weight: 400})
+          h2 #1F2041
+    +layout__container({margin_bottom: '1_45'})
+      +rectangle({theme: 'dark-50'})
+      +layout__container({direction: 'column', padding_left: '2_9', justify: 'evenly'})
+        +layout__container({padding_top: '0_7'})
+          h2 Dark Shade 50%
+        +layout__container({padding_bottom: '0_3', weight: 400})
+          h2 #1F2041
+    +layout__container({margin_bottom: '1_45'})
+      +rectangle({theme: 'dark-25'})
+      +layout__container({direction: 'column', padding_left: '2_9', justify: 'evenly'})
+        +layout__container({padding_top: '0_7'})
+          h2 Dark Shade 25%
+        +layout__container({padding_bottom: '0_3', weight: 400})
+          h2 #1F2041
+    +layout__container({margin_bottom: '1_45'})
+      +rectangle({theme: 'dark-05'})
+      +layout__container({direction: 'column', padding_left: '2_9', justify: 'evenly'})
+        +layout__container({padding_top: '0_7'})
+          h2 Dark Shade 5%
+        +layout__container({padding_bottom: '0_3', weight: 400})
+          h2 #1F2041
+    +layout__container({margin_bottom: '1_45'})
+      +rectangle({theme: 'primary'})
+      +layout__container({direction: 'column', padding_left: '2_9', justify: 'evenly'})
+        +layout__container({padding_top: '0_7'})
+          h2 Purple
+        +layout__container({padding_bottom: '0_3', weight: 400})
+          h2 #BC9CFF
+    +layout__container({margin_bottom: '1_45'})
+      +rectangle({theme: 'secondary'})
+      +layout__container({direction: 'column', padding_left: '2_9', justify: 'evenly'})
+        +layout__container({padding_top: '0_7'})
+          h2 Green
+        +layout__container({padding_bottom: '0_3', weight: 400})
+          h2 #6FCF97
+
+      //- right side
+
+  +layout__container({direction: 'column'})
+    +layout__container({padding_top: '2_4', height_max: '21_2'})
+      +layout__container({display: 'inline', width_max: '22', text_align: 'right', color: 'dark_25', weight: 400,  text_transform: 'Yes'})
+        h1 h1
+      +layout__container({display: 'inline', margin_left: '2_2', width_max: '64'})
+        h1 This one is the sub-section or widget title
+    +layout__container({height_max: '14_3'})
+      +layout__container({display: 'inline', width_max: '22', text_align: 'right', color: 'dark_25', weight: 400, text_transform: 'Yes'})
+        h2 h2
+      +layout__container({display: 'inline', margin_left: '2_2', width_max: '54'})
+        h2 Next one is the item title inside widgets
+    +layout__container({height_max: '10'})
+      +layout__container({display: 'inline', width_max: '22', text_align: 'right', color: 'dark_25', weight: 400})
+        h3 h3
+      +layout__container({display: 'inline', margin_left: '2_2', width_max: '54'})
+        h3 This is a label or CTA text
+    +layout__container()
+      +layout__container({display: 'inline', width_max: '22', text_align: 'right', color: 'dark_25', weight: 400})
+        span Body
+      +layout__container({display: 'inline', margin_left: '2_2', width_max: '44'})
+        span This is the body text which is used for most of the design, like paragraphs, lists, etc.
+

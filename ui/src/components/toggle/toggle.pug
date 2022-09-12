@@ -1,0 +1,34 @@
+//- options.expand - задает (data-attr) data-expand, возможные значение 'up', по умолчанию 'down'.
+
+mixin toggle(options)
+  if !options
+    - options = {}
+
+  - if (!options.data)
+    .toggle
+      .toggle__elements
+        .toggle__element.js-toggle__element
+          .toggle__element-label.js-toggle__element-label
+            .toggle__element-ball.js-toggle__element-ball
+          span.toggle__element-content.js-toggle__element-content example
+        .toggle__element.js-toggle__element
+          .toggle__element-label.js-toggle__element-label
+            .toggle__element-ball.js-toggle__element-ball
+          span.toggle__element-content.js-toggle__element-content example 2
+
+
+  - if (options.data)
+    .toggle
+      .toggle__header
+        h3= options.data.name
+        h3= options.data.example
+      .toggle__elements
+        .toggle__element.js-toggle__element
+          .toggle__element-label.js-toggle__element-label
+            .toggle__element-ball.js-toggle__element-ball
+          span.toggle__element-content.js-toggle__element-content= options.data.content
+        .toggle__element.js-toggle__element
+          .toggle__element-label.js-toggle__element-label
+            .toggle__element-ball.js-toggle__element-ball
+          span.toggle__element-content.js-toggle__element-content= options.data.content1
+

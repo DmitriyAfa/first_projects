@@ -1,0 +1,66 @@
+//-
+  options.name - form element name
+  options.type - input type
+  options.placeholder - input placeholder
+  options.pattern - input pattern
+  options.tabindex - input tabindex
+  options.required - input required
+  options.label - подпись к checkbox и radio
+
+mixin input(options)
+  if !options
+    - options = {}
+
+  -
+    let classes = ''
+    classes += options.size ? ' input_size_' + options.size : ''
+
+
+  - if (!options.data)
+    .input(class= classes)
+      - if (options.type === 'text' || options.type === 'email' || options.type === 'password' || options.type === 'date')
+        input.input__element(
+          type = options.type
+          name = options.name
+          placeholder = options.placeholder
+          pattern = options.pattern
+          tabindex = options.tabindex
+          required = options.required
+        )
+
+  - if (options.data && options.name !== 'subscription-text-field')
+    .input(class= classes)
+      .input__header
+        h3= options.data.name
+        h3= options.data.example
+      - if (options.type === 'text' || options.type === 'email' || options.type === 'password' || options.type === 'date')
+        input.input__element(
+          type = options.type
+          name = options.name
+          value = options.value
+          placeholder = options.placeholder
+          pattern = options.pattern
+          tabindex = options.tabindex
+          required = options.required
+        )
+
+  - if (options.data && options.name === 'subscription-text-field')
+    .input(
+      class= classes
+      data-name = options.name
+      )
+      .input__header
+        h3= options.data.name
+        h3= options.data.example
+      - if (options.type === 'text' || options.type === 'email' || options.type === 'password' || options.type === 'date')
+        .input__elements
+          input.input__element(
+            type = options.type
+            name = options.name
+            value = options.value
+            placeholder = options.placeholder
+            pattern = options.pattern
+            tabindex = options.tabindex
+            required = options.required
+          )
+          button.input__btn

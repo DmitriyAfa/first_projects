@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form elements
+    </title>
+  <script defer src="scripts/vendors-node_modules_js-datepicker_dist_datepicker_min_js-node_modules_js-datepicker_src_date-6c3730.js"></script><script defer src="scripts/scripts.js"></script><link href="style/style.738c8989be120954a889.css" rel="stylesheet"><link href="style/style.8f386600c427e4d7ba2d.css" rel="stylesheet"></head>
+  <body>
+    <div class="layout">
+      <header class="layout__header">
+        <div class="layout__container  layout__container_padding_2_1">
+          <div class="header">
+            <div class="header__logo" href="#"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"/>
+<path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"/>
+<path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"/>
+</svg>
+
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="layout__main">
+        <div class="layout__container  layout__container_padding_top_0_9 layout__container_padding_left_10_0_5 layout__container_column layout__container_width_max_40">
+          <div class="layout__container  layout__container_padding_top_0_9">
+            <div class="input">
+              <div class="input__header">
+                <h3>text field</h3>
+                <h3>default</h3>
+              </div>
+              <input class="input__element" type="text" name="text field" placeholder="Email">
+            </div>
+          </div>
+          <div class="layout__container  layout__container_padding_top_1_1_5">
+            <div class="input">
+              <div class="input__header">
+                <h3>text field</h3>
+                <h3>hover / focus</h3>
+              </div>
+              <input class="input__element" type="text" name="text field" value="This is pretty awesome">
+            </div>
+          </div>
+          <div class="layout__container  layout__container_padding_top_1_1_5">
+            <div class="drop-down js-drop-down">
+              <div class="drop-down__header">
+                <h3>dropdown</h3>
+                <h3></h3>
+              </div>
+              <div class="drop-down__label js-drop-down__label" data-name="dropdown"><span class="drop-down__content js-drop-down__content">Сколько гостей</span>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_padding_top_1_3">
+            <div class="input">
+              <div class="input__header">
+                <h3>masked text field</h3>
+                <h3></h3>
+              </div>
+              <input class="input__element" type="date">
+            </div>
+          </div>
+          <div class="layout__container  layout__container_padding_top_2_6">
+            <div class="date-dropdown">
+              <div class="date-dropdown__header">
+                <h3>date dropdown</h3>
+                <h3></h3>
+              </div>
+              <input class="date-dropdown__element  date-dropdown__element_size_medium js-date-dropdown__start" id="1" type="text" name="date-dropdown" placeholder="ДД.ММ.ГГГГ">
+            </div>
+            <div class="layout__container  layout__container_margin_left_1_5">
+              <div class="date-dropdown">
+                <div class="date-dropdown__header">
+                  <h3>date dropdown</h3>
+                  <h3></h3>
+                </div>
+                <input class="date-dropdown__element  date-dropdown__element_size_medium js-date-dropdown__end" id="1" type="text" name="date-dropdown" placeholder="ДД.ММ.ГГГГ">
+              </div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_padding_top_2_6">
+            <div class="date-dropdown">
+              <div class="date-dropdown__header">
+                <h3>filter date dropdown</h3>
+                <h3></h3>
+              </div>
+              <input class="date-dropdown__element  js-date-dropdown__filter-date-dropdown" id="1" type="text" name="filter-date-dropdown">
+            </div>
+          </div>
+          <div class="layout__container  layout__container_padding_top_2_6_5">
+            <div class="input" data-name="subscription-text-field">
+              <div class="input__header">
+                <h3>Subscription Text Field</h3>
+                <h3></h3>
+              </div>
+              <div class="input__elements">
+                <input class="input__element" type="email" name="subscription-text-field" placeholder="Email">
+                <button class="input__btn"></button>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_padding_top_6_8_5">
+            <div class="drop-down js-drop-down">
+              <div class="drop-down__header">
+                <h3>dropdown</h3>
+                <h3>default</h3>
+              </div>
+              <div class="drop-down__label js-drop-down__label  drop-down__label_size_medium"><span class="drop-down__content js-drop-down__content">2 спальни, 2 кровати...</span>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_padding_top_1_1 layout__container_height_18">
+            <div class="drop-down js-drop-down">
+              <div class="drop-down__header">
+                <h3>dropdown</h3>
+                <h3>expanded</h3>
+              </div>
+              <div class="drop-down__label js-drop-down__label  drop-down__label_size_medium" data-name="amanities"><span class="drop-down__content js-drop-down__content">2 спальни, 2 кровати...</span>
+                <div class="drop-down__item js-drop-down__item" value="спальни"> 
+                  <h3>спальни</h3>
+                  <div class="drop-down__counter js-drop-down__counter" data-counter="1">
+                    <button class="drop-down__math drop-down__math-minus js-drop-down__math-minus">&#45;</button>
+                    <h3 class="drop-down__math-counter js-drop-down__math-counter">2</h3>
+                    <button class="drop-down__math drop-down__math-plus drop-down__math_actived js-drop-down__math-plus">&#43;</button>
+                  </div>
+                </div>
+                <div class="drop-down__item js-drop-down__item" value="кровати"> 
+                  <h3>кровати</h3>
+                  <div class="drop-down__counter js-drop-down__counter" data-counter="2">
+                    <button class="drop-down__math drop-down__math-minus js-drop-down__math-minus">&#45;</button>
+                    <h3 class="drop-down__math-counter js-drop-down__math-counter">2</h3>
+                    <button class="drop-down__math drop-down__math-plus drop-down__math_actived js-drop-down__math-plus">&#43;</button>
+                  </div>
+                </div>
+                <div class="drop-down__item js-drop-down__item" value="ванные комнаты"> 
+                  <h3>ванные комнаты</h3>
+                  <div class="drop-down__counter js-drop-down__counter" data-counter="3">
+                    <button class="drop-down__math drop-down__math-minus js-drop-down__math-minus">&#45;</button>
+                    <h3 class="drop-down__math-counter js-drop-down__math-counter">0</h3>
+                    <button class="drop-down__math drop-down__math-plus drop-down__math_actived js-drop-down__math-plus">&#43;</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_height_4_6">
+            <div class="checkbox">
+              <div class="checkbox__header js-checkbox__header" data-type="expandabled">
+                <h3 class="checkbox__header-h3">expandable checkbox list</h3>
+                <button class="checkbox__header-button js-checkbox__header-button"></button>
+              </div>
+              <div class="checkbox__element checkbox__element_expanded checkbox__element_none js-checkbox__element">
+              </div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_height_22">
+            <div class="checkbox">
+              <div class="checkbox__header js-checkbox__header" data-type="expandabled">
+                <h3 class="checkbox__header-h3">expandable checkbox list</h3>
+                <button class="checkbox__header-button js-checkbox__header-button"></button>
+              </div>
+              <div class="checkbox__element checkbox__element_expanded checkbox__element_none js-checkbox__element">
+                <div class="checkbox__element-checkbox js-checkbox__element-checkbox">
+                  <div class="checkbox__element-box js-checkbox__element-box">
+                    <div class="checkbox__element-tick js-checkbox__element-tick"></div>
+                  </div>
+                  <p class="checkbox__element-content">Завтрак</p>
+                </div>
+                <div class="checkbox__element-checkbox js-checkbox__element-checkbox">
+                  <div class="checkbox__element-box js-checkbox__element-box">
+                    <div class="checkbox__element-tick js-checkbox__element-tick"></div>
+                  </div>
+                  <p class="checkbox__element-content">Письменный стол</p>
+                </div>
+                <div class="checkbox__element-checkbox js-checkbox__element-checkbox">
+                  <div class="checkbox__element-box js-checkbox__element-box">
+                    <div class="checkbox__element-tick js-checkbox__element-tick"></div>
+                  </div>
+                  <p class="checkbox__element-content">Стул для кормления</p>
+                </div>
+                <div class="checkbox__element-checkbox js-checkbox__element-checkbox">
+                  <div class="checkbox__element-box js-checkbox__element-box">
+                    <div class="checkbox__element-tick js-checkbox__element-tick"></div>
+                  </div>
+                  <p class="checkbox__element-content">Кроватка</p>
+                </div>
+                <div class="checkbox__element-checkbox js-checkbox__element-checkbox">
+                  <div class="checkbox__element-box js-checkbox__element-box">
+                    <div class="checkbox__element-tick js-checkbox__element-tick"></div>
+                  </div>
+                  <p class="checkbox__element-content">Телевизор</p>
+                </div>
+                <div class="checkbox__element-checkbox js-checkbox__element-checkbox">
+                  <div class="checkbox__element-box js-checkbox__element-box">
+                    <div class="checkbox__element-tick js-checkbox__element-tick"></div>
+                  </div>
+                  <p class="checkbox__element-content">Шампунь</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container">
+            <div class="evalution">
+              <div class="evalution__list"><img class="evalution__img" src="img/emoticon.svg" alt="photo">
+                <div class="evalution__contents">
+                  <h3 class="evalution__content-header">Комфорт</h3>
+                  <p class="evalution__content">Шумопоглощающие стены</p>
+                </div>
+              </div>
+              <div class="evalution__list"><img class="evalution__img" src="img/city.svg" alt="photo">
+                <div class="evalution__contents">
+                  <h3 class="evalution__content-header">Удобство</h3>
+                  <p class="evalution__content">Окно в каждой из спален</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="layout__container  layout__container_padding_top_1_7_5 layout__container_padding_left_1_9 layout__container_column layout__container_width_max_28">
+          <div class="layout__container  layout__container_height_max_12_1">
+            <div class="checkbox">
+              <div class="checkbox__header js-checkbox__header">
+                <h3>checkbox buttons</h3>
+                <h3></h3>
+              </div>
+              <div class="checkbox__element js-checkbox__element">
+                <div class="checkbox__element-checkbox js-checkbox__element-checkbox">
+                  <div class="checkbox__element-box js-checkbox__element-box">
+                    <div class="checkbox__element-tick js-checkbox__element-tick"></div>
+                  </div>
+                  <p class="checkbox__element-content">Можно курить</p>
+                </div>
+                <div class="checkbox__element-checkbox js-checkbox__element-checkbox">
+                  <div class="checkbox__element-box js-checkbox__element-box">
+                    <div class="checkbox__element-tick js-checkbox__element-tick"></div>
+                  </div>
+                  <p class="checkbox__element-content">Можно с питомцами</p>
+                </div>
+                <div class="checkbox__element-checkbox js-checkbox__element-checkbox">
+                  <div class="checkbox__element-box js-checkbox__element-box">
+                    <div class="checkbox__element-tick js-checkbox__element-tick"></div>
+                  </div>
+                  <p class="checkbox__element-content">Можно пригласить гостей (до 10 человек)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_height_max_6_6">
+            <div class="radio">
+              <div class="radio__header">
+                <h3>radio buttons</h3>
+                <h3></h3>
+              </div>
+              <div class="radio__elements">
+                <div class="radio__element">
+                  <div class="radio__element-label">
+                    <div class="radio__element-ball"></div>
+                  </div><span class="radio__element-content">Мужчина</span>
+                </div>
+                <div class="radio__element">
+                  <div class="radio__element-label">
+                    <div class="radio__element-ball"></div>
+                  </div><span class="radio__element-content">Женщина</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_height_max_9_2_5">
+            <div class="toggle">
+              <div class="toggle__header">
+                <h3>toggle</h3>
+                <h3></h3>
+              </div>
+              <div class="toggle__elements">
+                <div class="toggle__element js-toggle__element">
+                  <div class="toggle__element-label js-toggle__element-label">
+                    <div class="toggle__element-ball js-toggle__element-ball"></div>
+                  </div><span class="toggle__element-content js-toggle__element-content">Получать спецпредложения</span>
+                </div>
+                <div class="toggle__element js-toggle__element">
+                  <div class="toggle__element-label js-toggle__element-label">
+                    <div class="toggle__element-ball js-toggle__element-ball"></div>
+                  </div><span class="toggle__element-content js-toggle__element-content">Получать спецпредложения</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_height_max_6_5_5">
+            <div class="like js-like">
+              <div class="like__header">
+                <h3>like button</h3>
+                <h3></h3>
+              </div>
+              <div class="like__elements">
+                <div class="like__element" data-name="like">
+                  <p class="like__content">2</p>
+                </div>
+                <div class="like__element" data-name="like">
+                  <p class="like__content">11</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_height_max_17_9">
+            <div class="rate">
+              <div class="rate__header">
+                <h3>rate button</h3>
+                <h3></h3>
+              </div>
+              <div class="rate__elements">
+                <div class="rate-button">
+                  <input type="checkbox">
+                  <input type="checkbox">
+                  <input type="checkbox">
+                  <input type="checkbox">
+                  <input type="checkbox">
+                </div>
+                <div class="rate-button">
+                  <input type="checkbox">
+                  <input type="checkbox">
+                  <input type="checkbox">
+                  <input type="checkbox">
+                  <input type="checkbox">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_height_max_22_8">
+            <div class="drop-down js-drop-down">
+              <div class="drop-down__header">
+                <h3>dropdown</h3>
+                <h3></h3>
+              </div>
+              <div class="drop-down__label js-drop-down__label" data-name="guests"><span class="drop-down__content js-drop-down__content">Сколько гостей</span>
+                <div class="drop-down__item js-drop-down__item" value="Взрослые"> 
+                  <h3>Взрослые</h3>
+                  <div class="drop-down__counter js-drop-down__counter" data-counter="1">
+                    <button class="drop-down__math drop-down__math-minus js-drop-down__math-minus">&#45;</button>
+                    <h3 class="drop-down__math-counter js-drop-down__math-counter">0</h3>
+                    <button class="drop-down__math drop-down__math-plus drop-down__math_actived js-drop-down__math-plus">&#43;</button>
+                  </div>
+                </div>
+                <div class="drop-down__item js-drop-down__item" value="Дети"> 
+                  <h3>Дети</h3>
+                  <div class="drop-down__counter js-drop-down__counter" data-counter="2">
+                    <button class="drop-down__math drop-down__math-minus js-drop-down__math-minus">&#45;</button>
+                    <h3 class="drop-down__math-counter js-drop-down__math-counter">0</h3>
+                    <button class="drop-down__math drop-down__math-plus drop-down__math_actived js-drop-down__math-plus">&#43;</button>
+                  </div>
+                </div>
+                <div class="drop-down__item js-drop-down__item" value="Младенцы"> 
+                  <h3>Младенцы</h3>
+                  <div class="drop-down__counter js-drop-down__counter" data-counter="3">
+                    <button class="drop-down__math drop-down__math-minus js-drop-down__math-minus">&#45;</button>
+                    <h3 class="drop-down__math-counter js-drop-down__math-counter">0</h3>
+                    <button class="drop-down__math drop-down__math-plus drop-down__math_actived js-drop-down__math-plus">&#43;</button>
+                  </div>
+                </div>
+                <div class="drop-down__footer js-drop-down__footer">
+                  <div class="button">
+                    <button class="button__element  button__element_line_height_3_6">
+                      <h3>очистить</h3>
+                    </button>
+                  </div>
+                  <div class="button">
+                    <button class="button__element  button__element_line_height_3_6">
+                      <h3>применить</h3>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container">
+            <div class="checkbox">
+              <div class="checkbox__header js-checkbox__header">
+                <h3>rich checkbox buttons</h3>
+                <h3></h3>
+              </div>
+              <div class="checkbox__element js-checkbox__element">
+                <div class="checkbox__element-checkbox js-checkbox__element-checkbox" data-element="rich">
+                  <div class="checkbox__element-box js-checkbox__element-box">
+                    <div class="checkbox__element-tick js-checkbox__element-tick"></div>
+                  </div>
+                  <div class="checkbox__element-contents js-checkbox__element-contents">
+                    <h3 class="checkbox__element-contents-header js-checkbox__element-contents-header">Широкий коридор</h3>
+                    <p class="checkbox__element-content">Ширина коридоров в номере не менее 91 см.</p>
+                  </div>
+                </div>
+                <div class="checkbox__element-checkbox js-checkbox__element-checkbox" data-element="rich">
+                  <div class="checkbox__element-box js-checkbox__element-box">
+                    <div class="checkbox__element-tick js-checkbox__element-tick"></div>
+                  </div>
+                  <div class="checkbox__element-contents js-checkbox__element-contents">
+                    <h3 class="checkbox__element-contents-header js-checkbox__element-contents-header">Помощник для инвалидов</h3>
+                    <p class="checkbox__element-content">На 1 этаже вас встретит специалист и проводит до номера.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="layout__container  layout__container_padding_top_1_7_5 layout__container_padding_left_1_9 layout__container_column">
+          <div class="layout__container  layout__container_height_max_6_3">
+            <div class="range-slider js-range-slider">
+              <div class="range-slider__header js-range-slider__header">
+                <h3>range slider</h3>
+                <div class="range-slider__content js-range-slider__content"></div>
+              </div>
+              <div class="range-slider__element js-range-slider__element"></div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_column layout__container_height_max_22_1">
+            <div class="layout__container  layout__container_height_max_7_8">
+              <div class="button">
+                <div class="button__header">
+                  <h3>buttons</h3>
+                  <h3></h3>
+                </div>
+                <button class="button__element  button__element_width_middle button__element_theme_primary-gradient">
+                  <h3>click me</h3>
+                </button>
+              </div>
+              <div class="layout__container  layout__container_padding_top_2_5 layout__container_padding_left_1_4">
+                <div class="button">
+                  <button class="button__element  button__element_width_middle button__element_theme_primary-gradient button__element_opacity_05">
+                    <h3>click me</h3>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="layout__container  layout__container_height_max_4_3_5">
+              <div class="button">
+                <button class="button__element  button__element_width_middle button__element_border_primary-gradient">
+                  <h3>click me</h3>
+                </button>
+              </div>
+              <div class="layout__container  layout__container_padding_left_1_4">
+                <div class="button">
+                  <button class="button__element  button__element_width_middle button__element_border_primary-gradient button__element_opacity_05">
+                    <h3>click me</h3>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="layout__container  layout__container_height_max_4_2_5">
+              <div class="button">
+                <button class="button__element">
+                  <h3>click me</h3>
+                </button>
+              </div>
+              <div class="layout__container  layout__container_padding_left_1_5_5">
+                <div class="button">
+                  <button class="button__element  button__element_color_dark_50">
+                    <h3>click me</h3>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="layout__container">
+              <div class="button">
+                <button class="button__element  button__element_width_large button__element_theme_primary-gradient button__element_arrow">
+                  <h3>перейти к оплате</h3>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_padding_left_0_1 layout__container_height_max_24">
+            <div class="pagination js-pagination">
+              <div class="pagination__header js-pagination__header">
+                <h3>pagination</h3>
+                <h3></h3>
+              </div>
+              <div class="pagination__data js-pagination__data"></div>
+              <div class="pagination__container js-pagination__container"></div><span class="pagination__footer js-pagination__footer">1 – 12 из 100+ вариантов аренды</span>
+            </div>
+          </div>
+          <div class="layout__container  layout__container_height_max_22_8_5">
+            <div class="drop-down js-drop-down">
+              <div class="drop-down__header">
+                <h3>dropdown</h3>
+                <h3></h3>
+              </div>
+              <div class="drop-down__label js-drop-down__label" data-name="guests"><span class="drop-down__content js-drop-down__content">3 гостя</span>
+                <div class="drop-down__item js-drop-down__item" value="Взрослые"> 
+                  <h3>Взрослые</h3>
+                  <div class="drop-down__counter js-drop-down__counter" data-counter="1">
+                    <button class="drop-down__math drop-down__math-minus js-drop-down__math-minus">&#45;</button>
+                    <h3 class="drop-down__math-counter js-drop-down__math-counter">2</h3>
+                    <button class="drop-down__math drop-down__math-plus drop-down__math_actived js-drop-down__math-plus">&#43;</button>
+                  </div>
+                </div>
+                <div class="drop-down__item js-drop-down__item" value="Дети"> 
+                  <h3>Дети</h3>
+                  <div class="drop-down__counter js-drop-down__counter" data-counter="2">
+                    <button class="drop-down__math drop-down__math-minus js-drop-down__math-minus">&#45;</button>
+                    <h3 class="drop-down__math-counter js-drop-down__math-counter">1</h3>
+                    <button class="drop-down__math drop-down__math-plus drop-down__math_actived js-drop-down__math-plus">&#43;</button>
+                  </div>
+                </div>
+                <div class="drop-down__item js-drop-down__item" value="Младенцы"> 
+                  <h3>Младенцы</h3>
+                  <div class="drop-down__counter js-drop-down__counter" data-counter="3">
+                    <button class="drop-down__math drop-down__math-minus js-drop-down__math-minus">&#45;</button>
+                    <h3 class="drop-down__math-counter js-drop-down__math-counter">0</h3>
+                    <button class="drop-down__math drop-down__math-plus drop-down__math_actived js-drop-down__math-plus">&#43;</button>
+                  </div>
+                </div>
+                <div class="drop-down__footer js-drop-down__footer">
+                  <div class="button">
+                    <button class="button__element  button__element_line_height_3_6">
+                      <h3>очистить</h3>
+                    </button>
+                  </div>
+                  <div class="button">
+                    <button class="button__element  button__element_line_height_3_6">
+                      <h3>применить</h3>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layout__container">
+            <div class="bullet">
+              <div class="bullet__header">
+                <h3>bullet list</h3>
+                <h3></h3>
+              </div>
+              <div class="bullet__lists">
+                <div class="bullet__list">
+                  <div class="bullet__wrapper">
+                    <div class="bullet__ellipse"></div>
+                  </div>
+                  <p class="bullet__content">Нельзя с питомцами</p>
+                </div>
+                <div class="bullet__list">
+                  <div class="bullet__wrapper">
+                    <div class="bullet__ellipse"></div>
+                  </div>
+                  <p class="bullet__content">Без вечеринок и мероприятий</p>
+                </div>
+                <div class="bullet__list">
+                  <div class="bullet__wrapper">
+                    <div class="bullet__ellipse"></div>
+                  </div>
+                  <p class="bullet__content">Время прибытия — после 13:00, а выезд до 12:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="layout__footer">
+      </footer>
+    </div>
+    <script src="../../../../node_modules/jquery/dist/jquery.js"> </script>
+  </body>
+</html>

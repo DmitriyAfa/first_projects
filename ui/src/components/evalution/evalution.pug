@@ -1,0 +1,46 @@
+include ../like/like
+//-
+  options.name - form element name
+  options.type - input type
+  options.placeholder - input placeholder
+  options.pattern - input pattern
+  options.tabindex - input tabindex
+  options.required - input required
+  options.label - подпись к evalution и radio
+
+mixin evalution(options)
+  if !options
+    - options = {}
+
+  - if (!options.items)
+    .evalution
+      .evalution__list
+        .evalution__img
+        .evalution__contents
+          h3.evalution__content-header Example
+          p.evalution__content Example
+
+  - if (options.items)
+    .evalution
+      if (options.items && !options.type)
+        each item in options.items
+          .evalution__list
+            img.evalution__img(src=require(`../../components/evalution/img/${item.photo}.svg`), alt = 'photo')
+            .evalution__contents
+              h3.evalution__content-header= item.header
+              p.evalution__content= item.content
+      if (options.items && options.type === 'rewiew')
+        each item in options.items
+          .evalution__list(data-type= options.type)
+            img.evalution__img(src=require(`../../components/evalution/img/${item.photo}`), alt = 'photo' data-type= options.type)
+            .evalution__contents
+              h3.evalution__content-header= item.header
+              p.evalution__content= item.content
+          .evalution__rewiew
+            .evalution__like
+              +like({
+                content: item.like
+              })
+            p.evalution__comment= item.comment
+
+

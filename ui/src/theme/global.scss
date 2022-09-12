@@ -1,0 +1,58 @@
+@import "./variables.scss";
+@import "./fonts.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+
+  // @include media-breakpoint-up($xxs) {
+  //   font-size: 10px;
+  // }
+
+  // @include media-breakpoint-up($xs) {
+  //   font-size: 12px;
+  // }
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Montserrat, serif, "sans-serif";
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 24px;
+  color: $color-dark-75;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Montserrat, serif, "sans-serif";
+  font-weight: 700;
+  // font-size: 14px;
+  font-style: normal;
+  line-height: 24px;
+  color: $color-dark-100;
+}
+
+h1 {
+  font-size: 1.7rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.009rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+}
+
+h3 {
+  font-size: 0.81rem;
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+}

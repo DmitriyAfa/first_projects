@@ -1,0 +1,69 @@
+body {
+    margin: 0 auto;
+    background: linear-gradient( 90deg, #c4542b7a, #dcc41766, #0530ff73);
+}
+.board{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    text-align: center;
+
+}
+.column {
+	width: 350px;
+	padding:20px;
+	margin:0 20px 0 0;
+	font-family:Arial;
+	border-radius:8px;
+	border:2px solid transparent;
+
+    margin-top: 45px;
+}
+#todo {
+	background:rgb(158, 22, 4);
+}
+#todo .card {
+	background:#dc0f0f;
+}
+#inprogress {
+	background: rgb(211, 208, 9);
+	
+}
+#inprogress .card {
+	background:#d6ef09;
+}
+#completed {
+	background: rgb(39, 32, 150);
+}
+#completed .card {
+	background:#124fda;
+}
+
+.column.drop {
+	border:5px dashed rgb(0, 0, 0);
+}
+.column.drop .card {
+	pointer-events:none;
+}
+.card {
+	width:200px;
+	height:100px;
+	background:#333;
+	color:#fff;
+	margin: 20px auto;
+	padding:20px;
+    cursor: grab;
+	transition:all .07s linear;
+	border-radius:6px;
+}
+.card:last-child {
+	margin-bottom:0;
+}
+.card:active {
+    cursor: grabbing;
+}
+.card.dragging {
+	transform:scale(.8);
+	opacity:.5;
+}

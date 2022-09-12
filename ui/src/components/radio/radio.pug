@@ -1,0 +1,34 @@
+//- options.expand - задает (data-attr) data-expand, возможные значение 'up', по умолчанию 'down'.
+
+mixin radio(options)
+  if !options
+    - options = {}
+
+  - if (!options.data)
+    .radio
+      .radio__elements
+        .radio__element
+          .radio__element-label
+            .radio__element-ball
+          span.radio__element-content example
+        .radio__element
+          .radio__element-label
+            .radio__element-ball
+          span.radio__element-content example 2
+
+
+  - if (options.data)
+    .radio
+      .radio__header
+        h3= options.data.name
+        h3= options.data.example
+      .radio__elements
+        .radio__element
+          .radio__element-label
+            .radio__element-ball
+          span.radio__element-content= options.data.content
+        .radio__element
+          .radio__element-label
+            .radio__element-ball
+          span.radio__element-content= options.data.content1
+

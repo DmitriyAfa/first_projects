@@ -1,0 +1,23 @@
+//- options.expand - задает (data-attr) data-expand, возможные значение 'up', по умолчанию 'down'.
+
+mixin pagination(options)
+  if !options
+    - options = {}
+
+  - if (!options.data)
+    .pagination
+      .pagination__data.js-pagination__data
+      .pagination__container.js-pagination__container
+      span.pagination__footer.js-pagination__footer 1 – 12 из 100+ вариантов аренды
+
+
+  - if (options.data)
+    .pagination.js-pagination
+      .pagination__header.js-pagination__header
+        h3= options.data.name
+        h3= options.data.example
+      .pagination__data.js-pagination__data
+      .pagination__container.js-pagination__container
+      span.pagination__footer.js-pagination__footer 1 – 12 из 100+ вариантов аренды
+
+
